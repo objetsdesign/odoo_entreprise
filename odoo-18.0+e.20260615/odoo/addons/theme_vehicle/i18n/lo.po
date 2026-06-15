@@ -1,0 +1,924 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * theme_vehicle
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-07 13:31+0000\n"
+"PO-Revision-Date: 2026-05-23 18:41+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
+"theme_vehicle/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17\n"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_quotes_carousel_minimal
+msgid ""
+"\" A premier choice for luxury cars. <br/>Expert maintenance, exquisite "
+"service, and utmost professionalism. \""
+msgstr ""
+"\" ທາງເລືອກອັນດັບໜຶ່ງສຳລັບລົດຫູຫຼາ. <br/>ການບຳລຸງຮັກສາໂດຍຜູ້ຊ່ຽວຊານ, ການບໍລິການທີ່ດີເລີດ, ແລະ ຄວາ"
+"ມເປັນມືອາຊີບສູງສຸດ. \""
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_quotes_carousel_minimal
+msgid ""
+"\" Outstanding service and craftsmanship! <br/>They ensure every luxury "
+"vehicle is in perfect condition. \""
+msgstr ""
+"\" ການບໍລິການ ແລະ ຝີມືທີ່ໂດດເດັ່ນ! <br/>ພວກເຂົາຮັບປະກັນວ່າລົດຫູຫຼາທຸກຄັນແມ່ນຢູ່ໃນສະພາບທີ່ສົມບູນແບບ. "
+"\""
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_quotes_carousel_minimal
+msgid ""
+"\" Their service is exceptional. <br/>Premium care, top-notch quality, and "
+"unparalleled attention to detail. \""
+msgstr ""
+"\" ການບໍລິການຂອງພວກເຂົາແມ່ນພິເສດຫຼາຍ. <br/>ການເບິ່ງແຍງລະດັບພຣີມຽມ, ຄຸນນະພາບຊັ້ນເລີດ, ແລະ ໃສ່"
+"ໃຈລາຍລະອຽດທີ່ບໍ່ມີໃຜທຽບໄດ້. \""
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_numbers_charts
+msgid "$ 2.4B"
+msgstr "$ 2.4 ຕື້"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "$1,200.00"
+msgstr "$1,200.00"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "$2,500.00"
+msgstr "$2,500.00"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "$3,000.00"
+msgstr "$3,000.00"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "$4,000.00"
+msgstr "$4,000.00"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "$450.00"
+msgstr "$450.00"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "$800.00"
+msgstr "$800.00"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_numbers_charts
+msgid "+300,000"
+msgstr "+300,000"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_numbers_charts
+msgid ""
+"75% of our clients choose to upgrade to the latest models every 3 years, "
+"showcasing strong brand loyalty and trust."
+msgstr ""
+"75% ຂອງລູກຄ້າຂອງພວກເຮົາເລືອກທີ່ຈະອັບເກຣດເປັນລຸ້ນໃໝ່ຫຼ້າສຸດທຸກໆ 3 ປີ, ເຊິ່ງສະແດງໃຫ້ເຫັນເຖິງຄວາມຈົງຮັກ"
+"ພັກດີ ແລະ ຄວາມໄວ້ວາງໃຈຕໍ່ຍີ່ຫໍ້ຢ່າງແຂງແຮງ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_call_to_action
+msgid "<b>50,000 pre-orders</b> already registered."
+msgstr "<b>ມີການລົງທະບຽນສັ່ງຈອງລ່ວງໜ້າ 50,000 ຄັນ</b> ແລ້ວ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_image_text
+msgid "<b>A greener lifestyle</b>"
+msgstr "<b>ວິຖີຊີວິດທີ່ເປັນມິດກັບສິ່ງແວດລ້ອມ</b>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_text_image
+msgid "<b>The world is yours</b>"
+msgstr "<b>ໂລກໃບນີ້ເປັນຂອງທ່ານ</b>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_empowerment
+msgid ""
+"<br/>Offering a wide selection of quality cars to suit every need and "
+"budget.<br/><br/>"
+msgstr ""
+"<br/>ນຳສະເໜີລົດທີ່ມີຄຸນນະພາບຫຼາກຫຼາຍປະເພດ ເພື່ອໃຫ້ຕອບໂຈດທຸກຄວາມຕ້ອງການ ແລະ ງົບປະມານຂອງທ່າ"
+"ນ.<br/><br/>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_big_number
+msgid ""
+"<font class=\"text-gradient\" style=\"background-image: linear-gradient(0deg, rgb(29, 32, 48) 0%, rgb(222, 222, 222) 49%);\">\n"
+"            87%\n"
+"        </font>"
+msgstr ""
+"<font class=\"text-gradient\" style=\"background-image: linear-gradient"
+"(0deg, rgb(29, 32, 48) 0%, rgb(222, 222, 222) 49%);\">\n"
+"            87%\n"
+"        </font>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_empowerment
+msgid ""
+"<i class=\"fa fa-fw fa-info-circle o_not-animable\" role=\"img\"/>  Top-"
+"rated vehicles"
+msgstr ""
+"<i class=\"fa fa-fw fa-info-circle o_not-animable\" role=\"img\"/>  ລົດທີ່ໄດ້ຮັບຄວ"
+"າມນິຍົມສູງສຸດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.configurator_s_three_columns
+msgid "<span class=\"d-inline-block mb-4\"><b>From $14,000</b></span>"
+msgstr "<span class=\"d-inline-block mb-4\"><b>ເລີ່ມຕົ້ນ $14,000</b></span>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.configurator_s_three_columns
+msgid "<span class=\"d-inline-block mb-4\"><b>From $19,000</b></span>"
+msgstr "<span class=\"d-inline-block mb-4\"><b>ເລີ່ມຕົ້ນ $19,000</b></span>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.configurator_s_three_columns
+msgid "<span class=\"d-inline-block mb-4\"><b>From $25,000</b></span>"
+msgstr "<span class=\"d-inline-block mb-4\"><b>ເລີ່ມຕົ້ນ $25,000</b></span>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_picture
+msgid ""
+"<span class=\"text-o-color-3\">Our uniquely designed LED headlights are not "
+"only gorgeous but powerfully light your way.</span>"
+msgstr ""
+"<span class=\"text-o-color-3\">ໄຟໜ້າ LED ທີ່ຖືກອອກແບບມາເປັນເອກະລັກຂອງພວກເຮົາ ບໍ່ພຽງແຕ່ສ"
+"ວຍງາມເທົ່ານັ້ນ ແຕ່ຍັງໃຫ້ແສງສະຫວ່າງທີ່ຊັດເຈນໃນການເດີນທາງຂອງທ່ານ.</span>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_image_title
+msgid "A Deep Dive into Luxury and Innovation"
+msgstr "ເຈາະເລິກຄວາມຫູຫຼາ ແລະ ນະວັດຕະກຳ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_three_columns
+msgid ""
+"A bold statement in every detail, the Koran X captures the spirit of modern "
+"adventure. Built for those who refuse to compromise on performance and "
+"style."
+msgstr ""
+"ໂດດເດັ່ນໃນທຸກລາຍລະອຽດ, Koran X ສະທ້ອນເຖິງຈິດວິນຍານແຫ່ງການຜະຈົນໄພທີ່ທັນສະໄໝ. ສ້າງຂຶ້ນມາສຳລັບຜູ້ທີ່"
+"ຕ້ອງການຄວາມສົມບູນແບບທັງສະມັດຖະນະ ແລະ ສະໄຕລ໌."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cards_grid
+msgid ""
+"Achieve optimal performance with a sleek, aerodynamic design that reduces "
+"drag and enhances stability, ensuring superior speed and efficiency."
+msgstr ""
+"ບັນລຸສະມັດຖະນະສູງສຸດດ້ວຍການອອກແບບທີ່ລູ່ລົມ (Aerodynamic) ເຊິ່ງຊ່ວຍຫຼຸດແຮງຕ້ານ ແລະ ເພີ່ມຄວາມສະຖຽ"
+"ນ, ຮັບປະກັນຄວາມໄວ ແລະ ປະສິດທິພາບທີ່ເໜືອກວ່າ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cards_grid
+msgid "Aerodynamic Design"
+msgstr "ການອອກແບບຕາມຫຼັກແອໂຣໄດນາມິກ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_title
+msgid "All our models"
+msgstr "ລຸ້ນລົດທັງໝົດຂອງພວກເຮົາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features_wall
+msgid ""
+"Benefit from competitive financing plans and leasing options designed to "
+"make your car purchase as affordable as possible."
+msgstr ""
+"ຮັບຜົນປະໂຫຍດຈາກແຜນການເງິນ ແລະ ທາງເລືອກການເຊົ່າສິນເຊື່ອທີ່ຖືກອອກແບບມາເພື່ອໃຫ້ການຊື້ລົດຂອງທ່ານເປັນໄ"
+"ປໄດ້ງ່າຍຂຶ້ນ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_wavy_grid
+msgid "Bespoke Automotive Solutions"
+msgstr "ທາງເລືອກຍານພາຫະນະທີ່ປັບແຕ່ງມາສະເພາະ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_freegrid
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_quadrant
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_striped_center_top
+msgid "Book a Service"
+msgstr "ຈອງຄິວບໍລິການ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_empowerment
+msgid "Book a test drive"
+msgstr "ຈອງທົດລອງຂັບ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_product_list
+msgid "Brakes #1"
+msgstr "ເບຣກ #1"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_product_list
+msgid "Brakes #2"
+msgstr "ເບຣກ #2"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_product_list
+msgid "Brakes #3"
+msgstr "ເບຣກ #3"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_product_list
+msgid "Brakes #4"
+msgstr "ເບຣກ #4"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_product_list
+msgid "Brakes #5"
+msgstr "ເບຣກ #5"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_product_list
+msgid "Brakes #6"
+msgstr "ເບຣກ #6"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_picture
+msgid ""
+"Bring the KORAN to life on your smartphone or tablet so you can visualise it"
+" for yourself"
+msgstr ""
+"ສຳຜັດກັບ KORAN ຜ່ານສະມາດໂຟນ ຫຼື ແທັບເລັດຂອງທ່ານ ເພື່ອໃຫ້ທ່ານສາມາດເຫັນພາບຈິງໄດ້ດ້ວຍຕົວທ່ານເອງ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_empowerment
+msgid "Browse our inventory   <i class=\"fa fa-long-arrow-right\" role=\"img\"/>"
+msgstr ""
+"ເບິ່ງລົດໃນສະຕັອກຂອງພວກເຮົາ   <i class=\"fa fa-long-arrow-right\" role=\"img\"/>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_numbers_charts
+msgid ""
+"Clients saved $2.4 billion by choosing our eco-efficient and cost-effective "
+"vehicles."
+msgstr ""
+"ລູກຄ້າປະຢັດເງິນໄດ້ເຖິງ 2.4 ຕື້ໂດລາ ໂດຍການເລືອກໃຊ້ລົດທີ່ປະຢັດພະລັງງານ ແລະ ຄຸ້ມຄ່າຂອງພວກເຮົາ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid ""
+"Complete maintenance service covering engine check, transmission fluid "
+"change, brake inspection, and system diagnostics for optimal performance."
+msgstr ""
+"ບໍລິການບຳລຸງຮັກສາແບບຄົບວົງຈອນ ເຊິ່ງລວມມີການກວດເຊັກເຄື່ອງຈັກ, ປ່ຽນນ້ຳມັນເກຍ, ກວດກາລະບົບເບຣກ, ແລ"
+"ະ ວິເຄາະລະບົບຕ່າງໆ ເພື່ອສະມັດຖະນະທີ່ດີທີ່ສຸດ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_benefits
+msgid "Comprehensive Support"
+msgstr "ການຊ່ວຍເຫຼືອແບບຄົບວົງຈອນ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid ""
+"Comprehensive detailing service including exterior polishing, interior "
+"cleaning, and protective coatings for a showroom finish."
+msgstr ""
+"ບໍລິການເບິ່ງແຍງລາຍລະອຽດລົດແບບຄົບຊຸດ ລວມມີການຂັດເງົາພາຍນອກ, ທຳຄວາມສະອາດພາຍໃນ, ແລະ ເຄືອບປ້ອ"
+"ງກັນ ເພື່ອໃຫ້ລົດສວຍງາມຄືໃໝ່ຈາກໂຊຣູມ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.configurator_s_three_columns
+msgid "Configure"
+msgstr "ປັບແຕ່ງ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cta_box
+msgid "Contact us"
+msgstr "ຕິດຕໍ່ພວກເຮົາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "Custom Interior Upgrades"
+msgstr "ການອັບເກຣດພາຍໃນແບບພິເສດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_benefits
+msgid "Custom Vehicle Options"
+msgstr "ທາງເລືອກການປັບແຕ່ງລົດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_three_columns
+msgid ""
+"Designed for the thrill-seeker, the Koran GT brings race-inspired "
+"performance to the streets. Precision-tuned for speed, it promises an "
+"driving experience."
+msgstr ""
+"ອອກແບບມາສຳລັບຜູ້ທີ່ມັກຄວາມຕື່ນເຕັ້ນ, Koran GT ນຳສະມັດຖະນະລະດັບສະໜາມແຂ່ງມາສູ່ທ້ອງຖະໜົນ. ຖືກປັບແຕ່ງ"
+"ມາເພື່ອຄວາມໄວ, ຮັບປະກັນປະສົບການການຂັບຂີ່ທີ່ເໜືອລະດັບ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_images
+msgid "Discover Excellence in Luxury Vehicle Care"
+msgstr "ຄົ້ນພົບຄວາມເປັນເລີດໃນການເບິ່ງແຍງລົດຫູຫຼາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid ""
+"Discover our exclusive range of services for luxury vehicles, designed to "
+"provide unparalleled quality and sophistication. Experience excellence on "
+"every drive."
+msgstr ""
+"ຄົ້ນພົບການບໍລິການສຸດພິເສດສຳລັບລົດຫູຫຼາຂອງພວກເຮົາ, ທີ່ຖືກອອກແບບມາເພື່ອມອບຄຸນນະພາບ ແລະ ຄວາມສະຫງ່າງ"
+"າມທີ່ບໍ່ມີໃຜທຽບໄດ້. ສຳຜັດກັບຄວາມເປັນເລີດໃນທຸກການຂັບຂີ່."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_benefits
+msgid ""
+"Discover unique and advanced features that set our vehicles apart, providing"
+" you with exceptional performance and cutting-edge technology."
+msgstr ""
+"ຄົ້ນພົບຄຸນສົມບັດທີ່ເປັນເອກະລັກ ແລະ ທັນສະໄໝ ເຊິ່ງເຮັດໃຫ້ລົດຂອງພວກເຮົາມີຄວາມແຕກຕ່າງ, ມອບສະມັດຖະນະທີ່ຍ"
+"ອດຢ້ຽມ ແລະ ເຕັກໂນໂລຊີທີ່ລ້ຳສະໄໝໃຫ້ແກ່ທ່ານ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_carousel_intro
+msgid ""
+"Discover unparalleled automotive care with our expert services that blend "
+"precision, luxury, and exceptional performance."
+msgstr ""
+"ຄົ້ນພົບການເບິ່ງແຍງຍານພາຫະນະທີ່ບໍ່ມີໃຜທຽບໄດ້ ດ້ວຍການບໍລິການຈາກຜູ້ຊ່ຽວຊານຂອງພວກເຮົາ ທີ່ປະສົມປະສານຄວາ"
+"ມຊັດເຈນ, ຄວາມຫູຫຼາ, ແລະ ສະມັດຖະນະທີ່ໂດດເດັ່ນ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_framed_intro
+msgid "Drive Your Dream: Quality Cars for Every Journey"
+msgstr "ຂັບເຄື່ອນຄວາມຝັນຂອງທ່ານ: ລົດທີ່ມີຄຸນນະພາບສຳລັບທຸກການເດີນທາງ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_striped_center_top
+msgid "Drive with Confidence and Style"
+msgstr "ຂັບຂີ່ດ້ວຍຄວາມໝັ້ນໃຈ ແລະ ມີສະໄຕລ໌"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_card_offset
+msgid "Drive with confidence."
+msgstr "ຂັບຂີ່ດ້ວຍຄວາມໝັ້ນໃຈ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_unveil
+msgid "Drive your Passion"
+msgstr "ຂັບເຄື່ອນຕາມຄວາມມັກຂອງທ່ານ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_carousel_intro
+msgid "Driving excellence with luxury vehicles"
+msgstr "ຄວາມເປັນເລີດໃນການຂັບຂີ່ດ້ວຍລົດຫູຫຼາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features
+msgid "Dual Motor"
+msgstr "ມໍເຕີຄູ່"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_image_text
+msgid "Electric Driving"
+msgstr "ການຂັບຂີ່ດ້ວຍລະບົບໄຟຟ້າ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_masonry_block_image_texts_image_template
+msgid "Electrifying <b>Performance</b>."
+msgstr "<b>ສະມັດຖະນະ</b> ທີ່ເຕັມໄປດ້ວຍພະລັງໄຟຟ້າ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_carousel_intro
+msgid ""
+"Elevate your driving experience with our bespoke maintenance and repair "
+"solutions."
+msgstr ""
+"ຍົກລະດັບປະສົບການການຂັບຂີ່ຂອງທ່ານ ດ້ວຍວິທີການບຳລຸງຮັກສາ ແລະ ສ້ອມແປງທີ່ຖືກອອກແບບມາສະເພາະ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cards_grid
+msgid ""
+"Enjoy exceptional control and responsiveness with advanced suspension "
+"systems and precise steering, offering unmatched agility and cornering "
+"capabilities."
+msgstr ""
+"ເພີດເພີນກັບການຄວບຄຸມ ແລະ ການຕອບສະໜອງທີ່ຍອດຢ້ຽມ ດ້ວຍລະບົບຊ່ວງລຸ່ມທີ່ທັນສະໄໝ ແລະ ການບັງຄັບລ້ຽວທີ່ຊັດ"
+"ເຈນ, ມອບຄວາມຄ່ອງຕົວ ແລະ ຄວາມສາມາດໃນການເຂົ້າໂຄ້ງທີ່ບໍ່ມີໃຜທຽບໄດ້."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_wavy_grid
+msgid "Excellence and Craftsmanship"
+msgstr "ຄວາມເປັນເລີດ ແລະ ຄວາມປານີດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "Exclusive Exterior Customization"
+msgstr "ການປັບແຕ່ງພາຍນອກສຸດພິເສດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_benefits
+msgid "Exclusive Features"
+msgstr "ຄຸນສົມບັດພິເສດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cards_grid
+msgid ""
+"Experience thrilling acceleration and top speeds with our sports car’s high-"
+"performance engine, designed for an exhilarating driving experience on both "
+"the track and the road."
+msgstr ""
+"ສຳຜັດກັບອັດຕາເລັ່ງທີ່ຕື່ນເຕັ້ນ ແລະ ຄວາມໄວສູງສຸດ ດ້ວຍເຄື່ອງຈັກສະມັດຖະນະສູງຂອງລົດສະປອດຂອງພວກເຮົາ, ອອ"
+"ກແບບມາເພື່ອປະສົບການການຂັບຂີ່ທີ່ເລົ້າໃຈທັງໃນສະໜາມແຂ່ງ ແລະ ເທິງທ້ອງຖະໜົນ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_carousel_intro
+msgid "Experience top-tier luxury"
+msgstr "ສຳຜັດຄວາມຫູຫຼາລະດັບສູງສຸດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features_wall
+msgid "Expert Vehicle Service"
+msgstr "ບໍລິການລົດໂດຍຜູ້ຊ່ຽວຊານ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_images
+msgid "Expert technicians specializing in luxury and exotic vehicles"
+msgstr "ຊ່າງເຕັກນິກຜູ້ຊ່ຽວຊານສະເພາະດ້ານລົດຫູຫຼາ ແລະ ລົດແປກໃໝ່"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_carousel_intro
+msgid ""
+"Explore more and find premium services for your luxury vehicle, crafted to "
+"ensure unrivaled quality and customer satisfaction."
+msgstr ""
+"ຄົ້ນຫາເພີ່ມເຕີມ ແລະ ພົບກັບບໍລິການລະດັບພຣີມຽມສຳລັບລົດຫູຫຼາຂອງທ່ານ, ທີ່ຖືກສ້າງສັນຂຶ້ນເພື່ອຮັບປະກັນຄຸນນະພາບທີ່"
+"ດີເລີດ ແລະ ຄວາມເພິ່ງພໍໃຈຂອງລູກຄ້າ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_unveil
+msgid ""
+"Explore our exceptional range of cars designed for performance and luxury."
+msgstr ""
+"ຄົ້ນຫາລົດຫຼາກຫຼາຍລຸ້ນທີ່ໂດດເດັ່ນຂອງພວກເຮົາ ທີ່ຖືກອອກແບບມາເພື່ອສະມັດຖະນະ ແລະ ຄວາມຫູຫຼາ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features_wall
+msgid ""
+"Explore our extensive inventory of new and pre-owned cars to find the "
+"perfect vehicle that fits your needs and budget."
+msgstr ""
+"ຄົ້ນຫາລົດໃໝ່ ແລະ ລົດມືສອງໃນສະຕັອກທີ່ມີໃຫ້ເລືອກຢ່າງຫຼາກຫຼາຍ ເພື່ອຊອກຫາລົດທີ່ເໝາະສົມກັບຄວາມຕ້ອງການ ແລ"
+"ະ ງົບປະມານຂອງທ່ານ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_images_mosaic
+msgid "Explore premium maintenance and bespoke care for your high-end car."
+msgstr ""
+"ຄົ້ນຫາການບຳລຸງຮັກສາລະດັບພຣີມຽມ ແລະ ການເບິ່ງແຍງທີ່ປັບແຕ່ງສະເພາະສຳລັບລົດລະດັບໄຮເອັນ (High-end) "
+"ຂອງທ່ານ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_empowerment
+msgid "Find your perfect ride<br/>with premium car sales"
+msgstr "ຊອກຫາລົດທີ່ສົມບູນແບບຂອງທ່ານ<br/>ດ້ວຍການຂາຍລົດລະດັບພຣີມຽມ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features_wall
+msgid "Flexible Financing Options"
+msgstr "ທາງເລືອກການເງິນທີ່ຢືດຢຸ່ນ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "Full-Service Maintenance"
+msgstr "ການບໍລິການບຳລຸງຮັກສາແບບຄົບວົງຈອນ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cards_grid
+msgid "High-Performance Engine"
+msgstr "ເຄື່ອງຈັກສະມັດຖະນະສູງ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "High-Performance Tuning"
+msgstr "ການປັບແຕ່ງສະມັດຖະນະສູງ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cards_grid
+msgid ""
+"Immerse yourself in a driver-focused cockpit with sport seats, intuitive "
+"controls, and premium materials, all crafted to enhance your driving "
+"pleasure and comfort."
+msgstr ""
+"ດື່ມດ່ຳໄປກັບຫ້ອງໂດຍສານທີ່ເນັ້ນຜູ້ຂັບຂີ່ເປັນຫຼັກ ດ້ວຍເບາະນັ່ງແບບສະປອດ, ລະບົບຄວບຄຸມທີ່ໃຊ້ງານງ່າຍ, ແລະ ວັດສ"
+"ະດຸລະດັບພຣີມຽມ, ເຊິ່ງທັງໝົດຖືກສ້າງສັນຂຶ້ນມາເພື່ອເພີ່ມຄວາມມ່ວນຊື່ນ ແລະ ຄວາມສະບາຍໃນການຂັບຂີ່."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_wavy_grid
+msgid "Innovation and Performance"
+msgstr "ນະວັດຕະກຳ ແລະ ສະມັດຖະນະ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_call_to_action
+msgid "Join the early joiners or request for a trial on track."
+msgstr "ເຂົ້າຮ່ວມເປັນກຸ່ມທຳອິດ ຫຼື ຂໍທົດລອງຂັບໃນສະໜາມ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features_wall
+msgid ""
+"Keep your car in top condition with our comprehensive service and "
+"maintenance options, handled by skilled technicians."
+msgstr ""
+"ຮັກສາລົດຂອງທ່ານໃຫ້ຢູ່ໃນສະພາບທີ່ດີທີ່ສຸດ ດ້ວຍທາງເລືອກການບໍລິການ ແລະ ບຳລຸງຮັກສາທີ່ຄົບວົງຈອນ ໂດຍຊ່າງເຕັກ"
+"ນິກທີ່ມີຄວາມຊຳນານ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_card_offset
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_freegrid
+msgid ""
+"Keep your vehicle in top condition with our comprehensive repair and "
+"maintenance services. From cars to motorbikes, we offer expert solutions to "
+"ensure safe and smooth rides."
+msgstr ""
+"ຮັກສາຍານພາຫະນະຂອງທ່ານໃຫ້ຢູ່ໃນສະພາບທີ່ດີທີ່ສຸດ ດ້ວຍບໍລິການສ້ອມແປງ ແລະ ບຳລຸງຮັກສາແບບຄົບວົງຈອນ. ບໍ່ວ່າ"
+"ຈະເປັນລົດໃຫຍ່ ຫຼື ລົດຈັກ, ພວກເຮົາສະເໜີວິທີການແກ້ໄຂຈາກຜູ້ຊ່ຽວຊານ ເພື່ອຮັບປະກັນການຂັບຂີ່ທີ່ປອດໄພ ແລະ ລາ"
+"ບລື່ນ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_quadrant
+msgid ""
+"Keep your vehicle in top condition with our expert repair and maintenance "
+"services. From cars to motorbikes, we’ve got you covered.<br/><br/> Drive "
+"with confidence and style."
+msgstr ""
+"ຮັກສາຍານພາຫະນະຂອງທ່ານໃຫ້ຢູ່ໃນສະພາບດີທີ່ສຸດ ດ້ວຍບໍລິການສ້ອມແປງ ແລະ ບຳລຸງຮັກສາຈາກຜູ້ຊ່ຽວຊານ. ຕັ້ງແຕ່"
+"ລົດໃຫຍ່ຈົນເຖິງລົດຈັກ, ພວກເຮົາພ້ອມເບິ່ງແຍງທ່ານ.<br/><br/> ຂັບຂີ່ດ້ວຍຄວາມໝັ້ນໃຈ ແລະ ມີສະໄຕລ໌."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_striped_center_top
+msgid ""
+"Keep your vehicles running smoothly with our expert repair and maintenance "
+"services, designed for performance and reliability."
+msgstr ""
+"ໃຫ້ລົດຂອງທ່ານແລ່ນໄດ້ຢ່າງລາບລື່ນ ດ້ວຍບໍລິການສ້ອມແປງ ແລະ ບຳລຸງຮັກສາຈາກຜູ້ຊ່ຽວຊານ, ອອກແບບມາເພື່ອສະມັ"
+"ດຖະນະ ແລະ ຄວາມໜ້າເຊື່ອຖື."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_numbers_charts
+msgid "Key Metrics of our Achievements"
+msgstr "ຕົວຊີ້ວັດຫຼັກຂອງຄວາມສຳເລັດຂອງພວກເຮົາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_three_columns
+msgid "Koran GT"
+msgstr "Koran GT"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_three_columns
+msgid "Koran Mini"
+msgstr "Koran Mini"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_three_columns
+msgid "Koran X"
+msgstr "Koran X"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features
+msgid "Long Range"
+msgstr "ໄລຍະທາງໄກ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cta_box
+msgid ""
+"Looking for a leasing plan or a brand new car ? We got you covered<br/><br/>"
+msgstr ""
+"ກຳລັງຊອກຫາແຜນການເຊົ່າສິນເຊື່ອ ຫຼື ລົດໃໝ່ຢູ່ບໍ? ພວກເຮົາພ້ອມເບິ່ງແຍງທ່ານ<br/><br/>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "Luxury Vehicle Servicing"
+msgstr "ການບໍລິການລົດຫູຫຼາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_media_list
+msgid "News"
+msgstr "ຂ່າວສານ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_text_image
+msgid "No compromise"
+msgstr "ບໍ່ມີການຫຼຸດຜ່ອນຄຸນນະພາບ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_images_mosaic
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "Our Luxury Vehicle Services"
+msgstr "ບໍລິການລົດຫູຫຼາຂອງພວກເຮົາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_references
+msgid "Our Partners"
+msgstr "ຄູ່ຮ່ວມງານຂອງພວກເຮົາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_empowerment
+msgid "Our cars"
+msgstr "ລົດຂອງພວກເຮົາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_numbers_charts
+msgid ""
+"Our commitment to innovation, performance, and sustainability drives us "
+"forward, enabling us to deliver excellence across all categories of the "
+"automotive industry."
+msgstr ""
+"ຄວາມມຸ່ງໝັ້ນຂອງພວກເຮົາຕໍ່ນະວັດຕະກຳ, ສະມັດຖະນະ, ແລະ ຄວາມຍືນຍົງ ໄດ້ຂັບເຄື່ອນພວກເຮົາໄປຂ້າງໜ້າ, ເຮັດ"
+"ໃຫ້ພວກເຮົາສາມາດມອບຄວາມເປັນເລີດໃນທຸກໝວດໝູ່ຂອງອຸດສາຫະກຳຍານພາຫະນະ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_benefits
+msgid ""
+"Our team provides full support throughout your vehicle purchase and "
+"ownership experience, from initial consultation to ongoing service."
+msgstr ""
+"ທີມງານຂອງພວກເຮົາໃຫ້ການຊ່ວຍເຫຼືອຢ່າງເຕັມທີ່ຕະຫຼອດປະສົບການການຊື້ ແລະ ການເປັນເຈົ້າຂອງລົດຂອງທ່ານ, ຕັ້ງ"
+"ແຕ່ການໃຫ້ຄຳປຶກສາເບື້ອງຕົ້ນຈົນເຖິງການບໍລິການຫຼັງການຂາຍ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features_grid
+msgid "Our web store"
+msgstr "ຮ້ານຄ້າອອນລາຍຂອງພວກເຮົາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_text_image
+msgid ""
+"Performance and design were the key words during the conception of this "
+"super car. No compromises were made to keep the pleasure of driving despite "
+"those constraints."
+msgstr ""
+"ສະມັດຖະນະ ແລະ ການອອກແບບແມ່ນຫົວໃຈຫຼັກໃນການສ້າງສັນລົດຊຸບເປີຄານີ້. ພວກເຮົາບໍ່ມີການຫຼຸດຜ່ອນຄຸນນະພາບໃດ"
+"ໆ ເພື່ອຮັກສາຄວາມມ່ວນຊື່ນໃນການຂັບຂີ່ ເຖິງວ່າຈະມີຂໍ້ຈຳກັດຕ່າງໆກໍຕາມ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid ""
+"Performance tuning service including engine optimization, suspension "
+"upgrades, and exhaust modifications to enhance driving dynamics and power."
+msgstr ""
+"ບໍລິການປັບແຕ່ງສະມັດຖະນະ ລວມມີການປັບຈູນເຄື່ອງຈັກ, ອັບເກຣດຊ່ວງລຸ່ມ, ແລະ ປັບແຕ່ງທໍ່ໄອເສຍ ເພື່ອເພີ່ມພະລັ"
+"ງ ແລະ ຄວາມຄ່ອງຕົວໃນການຂັບຂີ່."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid ""
+"Personalized exterior modifications such as custom paint jobs, aerodynamic "
+"enhancements, and bespoke alloy wheels to reflect your style."
+msgstr ""
+"ການປັບແຕ່ງພາຍນອກຕາມຄວາມຕ້ອງການ ເຊັ່ນ: ການເຮັດສີພິເສດ, ການເພີ່ມອຸປະກອນແອໂຣໄດນາມິກ, ແລະ ລໍ້ແມັ"
+"ກທີ່ອອກແບບມາສະເພາະ ເພື່ອສະທ້ອນເຖິງສະໄຕລ໌ຂອງທ່ານ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_images
+msgid "Personalized service to ensure your vehicle's optimal performance"
+msgstr "ການບໍລິການທີ່ປັບແຕ່ງສະເພາະ ເພື່ອຮັບປະກັນສະມັດຖະນະທີ່ດີທີ່ສຸດຂອງລົດທ່ານ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cards_grid
+msgid "Precision Handling"
+msgstr "ການຄວບຄຸມທີ່ຊັດເຈນ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_striped_center_top
+msgid "Precision in every detail"
+msgstr "ຄວາມຊັດເຈນໃນທຸກລາຍລະອຽດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "Premium Detailing Package"
+msgstr "ແພັກເກັດເບິ່ງແຍງລາຍລະອຽດລະດັບພຣີມຽມ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_images
+msgid "Premium Services for Your High-End Automotive Needs"
+msgstr "ບໍລິການລະດັບພຣີມຽມ ສຳລັບທຸກຄວາມຕ້ອງການດ້ານຍານພາຫະນະລະດັບສູງຂອງທ່ານ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_carousel_intro
+msgid "Premium automotive services"
+msgstr "ບໍລິການຍານພາຫະນະລະດັບພຣີມຽມ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_card_offset
+msgid "Reliable Vehicle Services &amp; Repairs"
+msgstr "ບໍລິການ ແລະ ສ້ອມແປງຍານພາຫະນະທີ່ໄວ້ວາງໃຈໄດ້"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_freegrid
+msgid "Reliable Vehicle Services and Maintenance"
+msgstr "ບໍລິການ ແລະ ການບຳລຸງຮັກສາຍານພາຫະນະທີ່ໄວ້ວາງໃຈໄດ້"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_masonry_block_image_texts_image_template
+msgid "Smarter <b>Range</b>."
+msgstr "<b>ໄລຍະທາງ</b> ທີ່ສະຫຼາດກວ່າ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid ""
+"Specialized servicing tailored for high-end vehicles, including advanced "
+"diagnostics, custom parts, and manufacturer-recommended procedures."
+msgstr ""
+"ບໍລິການສະເພາະດ້ານທີ່ປັບແຕ່ງສຳລັບລົດລະດັບສູງ, ລວມມີການວິເຄາະຂັ້ນສູງ, ອະໄຫຼ່ພິເສດ, ແລະ ຂັ້ນຕອນຕາມມາດ"
+"ຕະຖານທີ່ຜູ້ຜະລິດແນະນຳ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cards_grid
+msgid "Sporty Interior"
+msgstr "ພາຍໃນແບບສະປອດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cover
+msgid "Start the engine"
+msgstr "ສະຕາດເຄື່ອງຈັກ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_images
+msgid "State-of-the-art facilities for superior maintenance"
+msgstr "ສິ່ງອຳນວຍຄວາມສະດວກທີ່ທັນສະໄໝ ເພື່ອການບຳລຸງຮັກສາທີ່ເໜືອກວ່າ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_wavy_grid
+msgid "Sustainable Luxury"
+msgstr "ຄວາມຫູຫຼາທີ່ຍືນຍົງ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid ""
+"Tailored interior enhancements including premium leather upholstery, bespoke"
+" trims, and advanced infotainment systems for a unique driving experience."
+msgstr ""
+"ການຕົກແຕ່ງພາຍໃນແບບພິເສດ ລວມມີການຫຸ້ມເບາະດ້ວຍໜັງລະດັບພຣີມຽມ, ການຕົກແຕ່ງຕາມສັ່ງ, ແລະ ລະບົບຄວາມ"
+"ບັນເທີງທີ່ທັນສະໄໝ ເພື່ອປະສົບການການຂັບຂີ່ທີ່ເປັນເອກະລັກ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_text_image
+msgid "Take advantage of a free track trial to discover it."
+msgstr "ຮັບສິດທິພິເສດໃນການທົດລອງຂັບໃນສະໜາມຟຣີ ເພື່ອສຳຜັດກັບມັນ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cover
+msgid "Take it all. Compliments too. <br/><br/>"
+msgstr "ຮັບໄປທັງໝົດ. ລວມທັງຄຳຊົມເຊີຍນຳ. <br/><br/>"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cover
+msgid "The New KORAN X"
+msgstr "KORAN X ລຸ້ນໃໝ່"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cta_box
+msgid "The best car dealer<br/>in your local area"
+msgstr "ຕົວແທນຈຳໜ່າຍລົດທີ່ດີທີ່ສຸດ<br/>ໃນພື້ນທີ່ຂອງທ່ານ"
+
+#. module: theme_vehicle
+#: model:ir.model,name:theme_vehicle.model_theme_utils
+msgid "Theme Utils"
+msgstr "ເຄື່ອງມືຊ່ວຍເຫຼືອຂອງທີມ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features
+msgid "Top Speed"
+msgstr "ຄວາມໄວສູງສຸດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_image_title
+msgid ""
+"Transform your driving experience with our exclusive collection, where "
+"opulence meets cutting-edge technology. Elevate your journey with vehicles "
+"that blend sophistication and performance seamlessly."
+msgstr ""
+"ປ່ຽນປະສົບການການຂັບຂີ່ຂອງທ່ານດ້ວຍຄໍເລັກຊັນສຸດພິເສດຂອງພວກເຮົາ, ບ່ອນທີ່ຄວາມຫູຫຼາມາພົບກັບເຕັກໂນໂລຊີທີ່ທັນສ"
+"ະໄໝ. ຍົກລະດັບການເດີນທາງຂອງທ່ານດ້ວຍລົດທີ່ປະສົມປະສານຄວາມສະຫງ່າງາມ ແລະ ສະມັດຖະນະໄດ້ຢ່າງລົງຕົວ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_images
+msgid "Trust us to keep your luxury vehicle in pristine condition"
+msgstr "ໄວ້ວາງໃຈໃຫ້ພວກເຮົາເບິ່ງແຍງລົດຫູຫຼາຂອງທ່ານໃຫ້ຢູ່ໃນສະພາບທີ່ສົມບູນແບບ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_cards_grid
+msgid "Unleash the Power of Our Sports Cars"
+msgstr "ປົດປ່ອຍພະລັງຂອງລົດສະປອດຂອງພວກເຮົາ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_three_columns
+msgid ""
+"Unleashing power with elegance, the Koran Mini blends advanced engineering "
+"with classic design, delivering a thrilling ride that’s both swift and "
+"smooth."
+msgstr ""
+"ປົດປ່ອຍພະລັງດ້ວຍຄວາມສະຫງ່າງາມ, Koran Mini ປະສົມປະສານວິສະວະກຳຂັ້ນສູງເຂົ້າກັບການອອກແບບຄລາດສິ"
+"ກ, ມອບການຂັບຂີ່ທີ່ໜ້າຕື່ນເຕັ້ນ ທັງຄວາມໄວ ແລະ ຄວາມນຸ້ມນວນ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_quadrant
+msgid "Vehicle Services"
+msgstr "ບໍລິການດ້ານຍານພາຫະນະ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_picture
+msgid "View the all-new KORAN in 3D wherever you are"
+msgstr "ເບິ່ງ KORAN ລຸ້ນໃໝ່ລ່າສຸດໃນຮູບແບບ 3D ໄດ້ທຸກບ່ອນທີ່ທ່ານຢູ່"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_key_benefits
+msgid ""
+"We offer personalized vehicle configurations to match your preferences and "
+"needs, ensuring you get the perfect fit for your lifestyle."
+msgstr ""
+"ພວກເຮົາສະເໜີການປັບແຕ່ງລົດຕາມຄວາມຕ້ອງການ ເພື່ອໃຫ້ກົງກັບຄວາມມັກ ແລະ ການໃຊ້ງານຂອງທ່ານ, ຮັບປະກັນວ່"
+"າທ່ານຈະໄດ້ລົດທີ່ເໝາະສົມກັບວິຖີຊີວິດຂອງທ່ານທີ່ສຸດ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_wavy_grid
+msgid ""
+"We offer the latest advancements in automotive technology and design. "
+"Leveraging cutting-edge features, we ensure every vehicle provides "
+"exceptional performance and sophistication."
+msgstr ""
+"ພວກເຮົານຳສະເໜີຄວາມກ້າວໜ້າຫຼ້າສຸດຂອງເຕັກໂນໂລຊີ ແລະ ການອອກແບບຍານພາຫະນະ. ດ້ວຍການນຳໃຊ້ຄຸນສົມບັດ"
+"ທີ່ທັນສະໄໝ, ພວກເຮົາຮັບປະກັນວ່າລົດທຸກຄັນຈະມອບສະມັດຖະນະທີ່ຍອດຢ້ຽມ ແລະ ຄວາມສະຫງ່າງາມ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_numbers_charts
+msgid "We proudly serve over 300,000 satisfied customers."
+msgstr ""
+"ພວກເຮົາມີຄວາມພາກພູມໃຈທີ່ໄດ້ບໍລິການລູກຄ້າທີ່ເພິ່ງພໍໃຈຫຼາຍກວ່າ 300,000 ຄົນ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_wavy_grid
+msgid ""
+"We provide tailored luxury vehicles designed to meet your specific "
+"preferences."
+msgstr "ພວກເຮົາສະໜອງລົດຫູຫຼາທີ່ຖືກປັບແຕ່ງມາເພື່ອຕອບໂຈດຄວາມມັກສະເພາະຂອງທ່ານ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_wavy_grid
+msgid "What we offer to our clients"
+msgstr "ສິ່ງທີ່ພວກເຮົາສະເໜີໃຫ້ລູກຄ້າ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features_wall
+msgid "Wide Vehicle Selection"
+msgstr "ມີລົດໃຫ້ເລືອກຢ່າງຫຼາກຫຼາຍ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_wavy_grid
+msgid ""
+"With extensive experience and superior craftsmanship, we provide high-end "
+"vehicles that deliver unmatched performance and style, ensuring a luxurious "
+"driving experience."
+msgstr ""
+"ດ້ວຍປະສົບການທີ່ຍາວນານ ແລະ ຝີມືທີ່ເໜືອກວ່າ, ພວກເຮົາສະໜອງລົດລະດັບໄຮເອັນ (High-end) ທີ່ມອບສະມັດຖະ"
+"ນະ ແລະ ສະໄຕລ໌ທີ່ບໍ່ມີໃຜທຽບໄດ້, ຮັບປະກັນປະສົບການການຂັບຂີ່ທີ່ຫູຫຼາ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_features_grid
+msgid "Your advantages"
+msgstr "ຜົນປະໂຫຍດຂອງທ່ານ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_wavy_grid
+msgid "Your satisfaction and environmental impact are our priorities."
+msgstr ""
+"ຄວາມເພິ່ງພໍໃຈຂອງທ່ານ ແລະ ຜົນກະທົບຕໍ່ສິ່ງແວດລ້ອມຄືສິ່ງທີ່ພວກເຮົາໃຫ້ຄວາມສຳຄັນ."
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_big_number
+msgid "customer satisfaction"
+msgstr "ຄວາມເພິ່ງພໍໃຈຂອງລູກຄ້າ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "✽  Customization &amp; Upgrades"
+msgstr "✽  ການປັບແຕ່ງ ແລະ ການອັບເກຣດ"
+
+#. module: theme_vehicle
+#: model_terms:theme.ir.ui.view,arch:theme_vehicle.s_pricelist_boxed
+msgid "✽  Maintenance &amp; Care"
+msgstr "✽  ການບຳລຸງຮັກສາ ແລະ ການເບິ່ງແຍງ"
