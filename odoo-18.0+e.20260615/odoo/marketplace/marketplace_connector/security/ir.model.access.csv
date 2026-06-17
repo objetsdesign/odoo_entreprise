@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_marketplace_marketplace_user,marketplace.marketplace.user,model_marketplace_marketplace,group_marketplace_user,1,0,0,0
+access_marketplace_marketplace_manager,marketplace.marketplace.manager,model_marketplace_marketplace,group_marketplace_manager,1,1,1,1
+access_marketplace_account_user,marketplace.account.user,model_marketplace_account,group_marketplace_user,1,1,0,0
+access_marketplace_account_manager,marketplace.account.manager,model_marketplace_account,group_marketplace_manager,1,1,1,1
+access_marketplace_listing_user,marketplace.listing.user,model_marketplace_listing,group_marketplace_user,1,1,1,0
+access_marketplace_listing_manager,marketplace.listing.manager,model_marketplace_listing,group_marketplace_manager,1,1,1,1
+access_marketplace_sync_log_user,marketplace.sync.log.user,model_marketplace_sync_log,group_marketplace_user,1,0,0,0
+access_marketplace_sync_log_manager,marketplace.sync.log.manager,model_marketplace_sync_log,group_marketplace_manager,1,1,1,1

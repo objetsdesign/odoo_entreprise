@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_marketplace" model="ir.ui.view">
+        <field name="name">sale.order.form.marketplace</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='client_order_ref']" position="after">
+                <field name="marketplace_account_id"/>
+                <field name="marketplace_order_ref"
+                       invisible="not marketplace_account_id"/>
+                <field name="marketplace_status"
+                       invisible="not marketplace_account_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_list_marketplace" model="ir.ui.view">
+        <field name="name">sale.order.list.marketplace</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <field name="marketplace_code" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="action_marketplace_orders" model="ir.actions.act_window">
+        <field name="name">Commandes Marketplace</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('marketplace_account_id', '!=', False)]</field>
+    </record>
+</odoo>

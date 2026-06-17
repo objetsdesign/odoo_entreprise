@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="p3d_demo_mug" model="product.template">
+            <field name="name">Tasse artisanale (3D)</field>
+            <field name="type">consu</field>
+            <field name="sale_ok" eval="True"/>
+            <field name="website_published" eval="True"/>
+            <field name="list_price">19.0</field>
+            <field name="is_3d" eval="True"/>
+            <field name="p3d_shape">mug</field>
+        </record>
+        <record id="p3d_color_cream" model="product.p3d.color">
+            <field name="product_tmpl_id" ref="p3d_demo_mug"/>
+            <field name="name">Crème</field><field name="html_color">#efe6da</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="p3d_color_terracotta" model="product.p3d.color">
+            <field name="product_tmpl_id" ref="p3d_demo_mug"/>
+            <field name="name">Terracotta</field><field name="html_color">#c0532f</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="p3d_color_green" model="product.p3d.color">
+            <field name="product_tmpl_id" ref="p3d_demo_mug"/>
+            <field name="name">Vert sauge</field><field name="html_color">#2f6f4f</field>
+            <field name="sequence">30</field>
+        </record>
+        <record id="p3d_color_blue" model="product.p3d.color">
+            <field name="product_tmpl_id" ref="p3d_demo_mug"/>
+            <field name="name">Bleu nuit</field><field name="html_color">#2c4a6e</field>
+            <field name="sequence">40</field>
+        </record>
+        <record id="p3d_color_black" model="product.p3d.color">
+            <field name="product_tmpl_id" ref="p3d_demo_mug"/>
+            <field name="name">Noir mat</field><field name="html_color">#222222</field>
+            <field name="sequence">50</field>
+        </record>
+
+        <!-- Produit avec modèle 3D réel (.glb) fourni avec le module. -->
+        <!-- Le fichier est servi depuis static/src/models/ via le contrôleur,
+             désigné par p3d_glb_filename (aucun hook nécessaire). -->
+        <record id="p3d_demo_handbag_glb" model="product.template">
+            <field name="name">Sac à main (modèle 3D réel)</field>
+            <field name="type">consu</field>
+            <field name="sale_ok" eval="True"/>
+            <field name="website_published" eval="True"/>
+            <field name="list_price">149.0</field>
+            <field name="is_3d" eval="True"/>
+            <field name="p3d_shape">handbag</field>
+            <field name="p3d_glb_filename">luwai-18.glb</field>
+        </record>
+        <!-- Teintes de démonstration pour le sac (appliquées sur la matière d'origine) -->
+        <record id="p3d_hb_natural" model="product.p3d.color">
+            <field name="product_tmpl_id" ref="p3d_demo_handbag_glb"/>
+            <field name="name">Naturel (d'origine)</field>
+            <field name="html_color">#ffffff</field><field name="sequence">10</field>
+        </record>
+        <record id="p3d_hb_cognac" model="product.p3d.color">
+            <field name="product_tmpl_id" ref="p3d_demo_handbag_glb"/>
+            <field name="name">Cognac</field>
+            <field name="html_color">#c98a4b</field><field name="sequence">20</field>
+        </record>
+        <record id="p3d_hb_taupe" model="product.p3d.color">
+            <field name="product_tmpl_id" ref="p3d_demo_handbag_glb"/>
+            <field name="name">Taupe</field>
+            <field name="html_color">#9b8b7a</field><field name="sequence">30</field>
+        </record>
+        <record id="p3d_hb_bordeaux" model="product.p3d.color">
+            <field name="product_tmpl_id" ref="p3d_demo_handbag_glb"/>
+            <field name="name">Bordeaux</field>
+            <field name="html_color">#7c3b3b</field><field name="sequence">40</field>
+        </record>
+    </data>
+</odoo>

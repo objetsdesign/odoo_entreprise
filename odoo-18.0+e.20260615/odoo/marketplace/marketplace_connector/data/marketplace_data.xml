@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="marketplace_amazon" model="marketplace.marketplace">
+        <field name="name">Amazon</field>
+        <field name="code">amazon</field>
+        <field name="sequence">10</field>
+    </record>
+    <record id="marketplace_etsy" model="marketplace.marketplace">
+        <field name="name">Etsy</field>
+        <field name="code">etsy</field>
+        <field name="sequence">20</field>
+    </record>
+    <record id="marketplace_laredoute" model="marketplace.marketplace">
+        <field name="name">La Redoute</field>
+        <field name="code">laredoute</field>
+        <field name="sequence">30</field>
+    </record>
+    <record id="marketplace_cdiscount" model="marketplace.marketplace">
+        <field name="name">Cdiscount</field>
+        <field name="code">cdiscount</field>
+        <field name="sequence">40</field>
+    </record>
+</odoo>

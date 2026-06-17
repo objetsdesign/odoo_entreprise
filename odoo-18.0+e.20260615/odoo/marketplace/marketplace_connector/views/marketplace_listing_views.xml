@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_marketplace_listing_list" model="ir.ui.view">
+        <field name="name">marketplace.listing.list</field>
+        <field name="model">marketplace.listing</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="account_id"/>
+                <field name="product_id"/>
+                <field name="sku"/>
+                <field name="ean"/>
+                <field name="external_id"/>
+                <field name="list_price"/>
+                <field name="qty_available"/>
+                <field name="sync_enabled"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'published'"
+                       decoration-danger="state == 'error'"/>
+                <field name="last_sync"/>
+                <button name="action_export" type="object" icon="fa-upload"
+                        string="Exporter" title="Exporter cette annonce"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_marketplace_listing_form" model="ir.ui.view">
+        <field name="name">marketplace.listing.form</field>
+        <field name="model">marketplace.listing</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_export" type="object"
+                            string="Exporter vers la marketplace" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="account_id"/>
+                            <field name="product_id"/>
+                            <field name="sku"/>
+                            <field name="ean"/>
+                        </group>
+                        <group>
+                            <field name="external_id"/>
+                            <field name="title"/>
+                            <field name="list_price"/>
+                            <field name="qty_available"/>
+                            <field name="sync_enabled"/>
+                            <field name="state"/>
+                            <field name="last_sync" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="last_error" readonly="1"
+                           invisible="not last_error"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_marketplace_listing_search" model="ir.ui.view">
+        <field name="name">marketplace.listing.search</field>
+        <field name="model">marketplace.listing</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_id"/>
+                <field name="sku"/>
+                <field name="account_id"/>
+                <filter name="published" string="Publié"
+                        domain="[('state', '=', 'published')]"/>
+                <filter name="error" string="En erreur"
+                        domain="[('state', '=', 'error')]"/>
+                <group expand="0" string="Regrouper par">
+                    <filter name="group_account" string="Compte"
+                            context="{'group_by': 'account_id'}"/>
+                    <filter name="group_state" string="Statut"
+                            context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_marketplace_listing" model="ir.actions.act_window">
+        <field name="name">Annonces Marketplace</field>
+        <field name="res_model">marketplace.listing</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

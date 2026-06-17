@@ -1,0 +1,184 @@
+/* ══════════════════════════════════════════════════
+   Configurateur 3D v3
+   ══════════════════════════════════════════════════ */
+
+.o_p3d { background-color: #fafafa; }
+.o_p3d_stage { width: 100%; height: 420px; overflow: hidden; }
+.o_p3d_stage canvas { display: block; }
+
+/* ── Sections ── */
+.o_p3d_section {
+    background: #fff;
+    border: 1px solid #e8e4dc;
+    border-radius: 12px;
+    padding: 16px;
+}
+.o_p3d_section_header {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.o_p3d_step_badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #8b1a3a; color: #fff;
+    font-size: 11px; font-weight: 700; flex-shrink: 0;
+}
+
+/* ── Tabs mode couleur ── */
+.o_p3d_mode_tabs {
+    display: flex;
+    gap: 6px;
+    background: #f2ede6;
+    border-radius: 24px;
+    padding: 4px;
+}
+.o_p3d_mode_tab {
+    flex: 1;
+    padding: 7px 12px;
+    font-size: 12px; font-weight: 600;
+    border: none; border-radius: 20px;
+    background: transparent; color: #666;
+    cursor: pointer;
+    transition: all .18s;
+}
+.o_p3d_mode_tab.active {
+    background: #8b1a3a;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(139,26,58,.25);
+}
+.o_p3d_mode_tab:hover:not(.active) { background: #e4ddd3; color: #333; }
+
+/* ── Swatches couleur ── */
+.o_p3d_color {
+    display: inline-block; width: 36px; height: 36px; border-radius: 50%;
+    border: 2px solid #fff; box-shadow: 0 0 0 1px #ccc;
+    cursor: pointer; transition: transform .15s;
+    flex-shrink: 0;
+}
+.o_p3d_color:hover { transform: scale(1.12); }
+.o_p3d_color_selected { box-shadow: 0 0 0 3px #8b1a3a !important; }
+.o_p3d_color_sm { width: 26px; height: 26px; }
+
+/* ── Sélecteur couleur libre ── */
+.o_p3d_color_wheel {
+    width: 36px; height: 36px;
+    border-radius: 50%; border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #ccc;
+    cursor: pointer; padding: 0;
+    overflow: hidden;
+    appearance: none; -webkit-appearance: none;
+    background: none;
+}
+.o_p3d_color_wheel::-webkit-color-swatch-wrapper { padding: 0; }
+.o_p3d_color_wheel::-webkit-color-swatch { border: none; border-radius: 50%; }
+
+/* ── Sections par partie ── */
+.o_p3d_part_section {
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background: #f9f6f2;
+    border-radius: 8px;
+    border: 1px solid #ede9e0;
+}
+.o_p3d_part_label {
+    font-size: 12px; font-weight: 600; color: #555;
+    margin-bottom: 6px;
+}
+
+/* ── Zone upload ── */
+.o_p3d_upload_zone {
+    border: 2px dashed #c9c5be;
+    border-radius: 12px;
+    padding: 16px 14px;
+    background: #fff;
+    text-align: center;
+    transition: border-color .2s, background .2s;
+}
+.o_p3d_upload_zone:hover { border-color: #8b1a3a; background: #fdf7f9; }
+.o_p3d_upload_btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: #8b1a3a; color: #fff;
+    border: none; border-radius: 24px;
+    padding: 9px 20px; font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: background .18s, transform .1s;
+}
+.o_p3d_upload_btn:hover { background: #6e1530; }
+.o_p3d_upload_btn:active { transform: scale(.97); }
+.o_p3d_upload_btn svg { width: 15px; height: 15px; }
+.o_p3d_clear_btn {
+    display: none; align-items: center; gap: 5px;
+    background: transparent; color: #8b1a3a;
+    border: 1.5px solid #8b1a3a; border-radius: 20px;
+    padding: 6px 14px; font-size: 12px; cursor: pointer;
+    transition: background .15s;
+}
+.o_p3d_clear_btn:hover { background: #fdf0f4; }
+.o_p3d_img_preview {
+    display: none; width: 56px; height: 56px;
+    object-fit: contain; border-radius: 8px;
+    border: 1px solid #e0ddd7; margin: 8px auto 0;
+}
+.o_p3d_upload_status { font-size: 12px; color: #5a7a4a; margin-top: 4px; min-height: 16px; text-align: center; }
+.o_p3d_upload_hint   { font-size: 11px; color: #aaa; margin-top: 4px; }
+
+/* ── Contrôles logo ── */
+.o_p3d_logo_controls {
+    background: #f7f5f2;
+    border: 1px solid #e4e0d8;
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 10px;
+}
+
+/* ── Zone de repositionnement drag du logo ── */
+.o_p3d_drop_label {
+    font-size: 12px; font-weight: 600; color: #555;
+    margin-bottom: 8px;
+}
+.o_p3d_logo_drop {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    border-radius: 10px;
+    border: 1.5px solid #d0cbc2;
+    background: #e8e3da no-repeat center/contain;
+    overflow: hidden;
+    cursor: crosshair;
+    /* Guide visuel : zones nommées */
+    background-image:
+        repeating-linear-gradient(90deg, rgba(0,0,0,.06) 0, rgba(0,0,0,.06) 1px, transparent 1px, transparent 25%),
+        repeating-linear-gradient(0deg,  rgba(0,0,0,.06) 0, rgba(0,0,0,.06) 1px, transparent 1px, transparent 33.3%);
+}
+.o_p3d_drop_zones { position: absolute; inset: 0; pointer-events: none; }
+.o_p3d_drop_zone_label {
+    position: absolute;
+    font-size: 10px; font-weight: 600; color: rgba(80,60,40,.45);
+    white-space: nowrap;
+    user-select: none;
+}
+/* Point draggable */
+.o_p3d_logo_dot {
+    position: absolute;
+    width: 24px; height: 24px;
+    left: calc(50% - 12px); top: calc(50% - 12px);
+    background: #8b1a3a;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.30);
+    cursor: grab;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    z-index: 10;
+    touch-action: none;
+    transition: box-shadow .1s, transform .1s;
+}
+.o_p3d_logo_dot:hover { box-shadow: 0 4px 14px rgba(139,26,58,.45); transform: scale(1.1); }
+.o_p3d_logo_dot:active { cursor: grabbing; transform: scale(0.95); }
+.o_p3d_logo_dot svg { width: 12px; height: 12px; }
+
+/* ── Slider ── */
+.form-range.o_p3d_logo_scale { accent-color: #8b1a3a; }

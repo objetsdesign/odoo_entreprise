@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="p3d_block" inherit_id="website_sale.product" name="Configurateur 3D">
+        <xpath expr="//div[@id='product_details']" position="inside">
+            <t t-if="product.is_3d">
+                <div class="o_p3d mt-4 p-3 border rounded"
+                     t-att-data-shape="product.p3d_shape or 'mug'"
+                     t-att-data-glb-url="(product.p3d_glb or product.p3d_glb_filename) and ('/product_3d/model/%s' % product.id) or ''">
+
+                    <h4 class="mb-3">Aperçu 3D &amp; personnalisation</h4>
+
+                    <form action="/product_3d/quote" method="post" class="js_p3d_form" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token"          t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="product_template_id" t-att-value="product.id"/>
+                        <input type="hidden" name="preview_image"       value=""/>
+                        <input type="hidden" name="color_id"            value=""/>
+                        <input type="hidden" name="color_name"          value=""/>
+                        <input type="hidden" name="custom_image_b64"    value=""/>
+                        <input type="hidden" name="logo_position"       value='{"x":0.5,"y":0.5}'/>
+                        <input type="hidden" name="logo_scale"          value="0.35"/>
+                        <input type="hidden" name="part_colors"         value="{}"/>
+
+                        <div class="row g-4">
+
+                            <!-- ════════ COL GAUCHE : visionneuse 3D ════════ -->
+                            <div class="col-lg-6">
+                                <div class="o_p3d_stage border rounded bg-white"/>
+                                <small class="text-muted d-block text-center mt-1">
+                                    Glissez pour tourner • molette pour zoomer
+                                </small>
+                            </div>
+
+                            <!-- ════════ COL DROITE : panneau personnalisation ════════ -->
+                            <div class="col-lg-6">
+
+                                <!-- ┌─────────────────────────────┐
+                                     │  SECTION 1 : COULEUR        │
+                                     └─────────────────────────────┘ -->
+                                <t t-if="product.p3d_color_ids">
+                                    <t t-set="p3d_is_glb" t-value="product.p3d_glb or product.p3d_glb_filename"/>
+                                    <div class="o_p3d_section mb-3">
+                                        <div class="o_p3d_section_header">
+                                            <span class="o_p3d_step_badge">1</span>
+                                            Couleur
+                                            <small t-if="p3d_is_glb" class="text-muted fw-normal ms-1">(teinte appliquée sur la matière d'origine)</small>
+                                        </div>
+
+                                        <!-- Tabs : couleur unique / par partie (masqué pour un modèle .glb) -->
+                                        <div class="o_p3d_mode_tabs mb-3" t-if="not p3d_is_glb">
+                                            <button type="button" class="o_p3d_mode_tab active" data-mode="single">
+                                                🎨 Couleur unique
+                                            </button>
+                                            <button type="button" class="o_p3d_mode_tab" data-mode="parts">
+                                                🖌️ Par partie
+                                            </button>
+                                        </div>
+
+                                        <!-- Panel couleur UNIQUE -->
+                                        <div class="o_p3d_color_panel" data-panel="single">
+                                            <div class="o_p3d_colors d-flex flex-wrap gap-2 mb-2">
+                                                <t t-foreach="product.p3d_color_ids" t-as="c">
+                                                    <span class="o_p3d_color"
+                                                          data-scope="single"
+                                                          t-att-title="c.name"
+                                                          t-att-data-id="c.id"
+                                                          t-att-data-name="c.name"
+                                                          t-att-data-color="c.html_color"
+                                                          t-attf-style="background-color:{{c.html_color}};"/>
+                                                </t>
+                                            </div>
+                                            <!-- Sélecteur couleur libre -->
+                                            <div class="d-flex align-items-center gap-2 mt-1">
+                                                <input type="color" class="o_p3d_free_color_picker o_p3d_color_wheel"
+                                                       value="#f5f3ef" title="Couleur personnalisée"/>
+                                                <small class="text-muted">Ou choisissez une couleur libre</small>
+                                            </div>
+                                        </div>
+
+                                        <!-- Panel couleur PAR PARTIE (masqué pour un modèle .glb) -->
+                                        <div class="o_p3d_color_panel" data-panel="parts" style="display:none;" t-if="not p3d_is_glb">
+                                            <p class="text-muted small mb-2">
+                                                Choisissez une couleur différente pour chaque partie du produit.
+                                            </p>
+                                            <!-- Sections générées dynamiquement par JS selon les parties disponibles -->
+                                            <!-- Pour la tasse : -->
+                                            <div class="o_p3d_part_section" data-part="body">
+                                                <div class="o_p3d_part_label">Corps</div>
+                                                <div class="d-flex flex-wrap gap-1 align-items-center">
+                                                    <t t-foreach="product.p3d_color_ids" t-as="c">
+                                                        <span class="o_p3d_color o_p3d_color_sm"
+                                                              data-scope="part"
+                                                              t-att-data-color="c.html_color"
+                                                              t-att-title="c.name"
+                                                              t-attf-style="background-color:{{c.html_color}};"/>
+                                                    </t>
+                                                    <input type="color" class="o_p3d_part_picker o_p3d_color_wheel" value="#f5f3ef"/>
+                                                </div>
+                                            </div>
+                                            <div class="o_p3d_part_section" data-part="handle">
+                                                <div class="o_p3d_part_label">Anse / poignée</div>
+                                                <div class="d-flex flex-wrap gap-1 align-items-center">
+                                                    <t t-foreach="product.p3d_color_ids" t-as="c">
+                                                        <span class="o_p3d_color o_p3d_color_sm"
+                                                              data-scope="part"
+                                                              t-att-data-color="c.html_color"
+                                                              t-att-title="c.name"
+                                                              t-attf-style="background-color:{{c.html_color}};"/>
+                                                    </t>
+                                                    <input type="color" class="o_p3d_part_picker o_p3d_color_wheel" value="#f5f3ef"/>
+                                                </div>
+                                            </div>
+                                            <div class="o_p3d_part_section" data-part="rim">
+                                                <div class="o_p3d_part_label">Rebord</div>
+                                                <div class="d-flex flex-wrap gap-1 align-items-center">
+                                                    <t t-foreach="product.p3d_color_ids" t-as="c">
+                                                        <span class="o_p3d_color o_p3d_color_sm"
+                                                              data-scope="part"
+                                                              t-att-data-color="c.html_color"
+                                                              t-att-title="c.name"
+                                                              t-attf-style="background-color:{{c.html_color}};"/>
+                                                    </t>
+                                                    <input type="color" class="o_p3d_part_picker o_p3d_color_wheel" value="#5a3e2b"/>
+                                                </div>
+                                            </div>
+                                            <div class="o_p3d_part_section" data-part="inner">
+                                                <div class="o_p3d_part_label">Intérieur</div>
+                                                <div class="d-flex flex-wrap gap-1 align-items-center">
+                                                    <t t-foreach="product.p3d_color_ids" t-as="c">
+                                                        <span class="o_p3d_color o_p3d_color_sm"
+                                                              data-scope="part"
+                                                              t-att-data-color="c.html_color"
+                                                              t-att-title="c.name"
+                                                              t-attf-style="background-color:{{c.html_color}};"/>
+                                                    </t>
+                                                    <input type="color" class="o_p3d_part_picker o_p3d_color_wheel" value="#5a3e2b"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+
+                                <!-- ┌─────────────────────────────┐
+                                     │  SECTION 2 : LOGO / IMAGE   │
+                                     └─────────────────────────────┘ -->
+                                <div class="o_p3d_section mb-3">
+                                    <div class="o_p3d_section_header">
+                                        <span class="o_p3d_step_badge">2</span>
+                                        Logo / Image
+                                        <small class="text-muted fw-normal ms-1">(s'ajoute sur la couleur)</small>
+                                    </div>
+
+                                    <div class="o_p3d_upload_zone mb-2">
+                                        <input type="file" class="o_p3d_file_input d-none"
+                                               accept="image/png,image/jpeg,image/svg+xml,image/webp"/>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap">
+                                            <button type="button" class="o_p3d_upload_btn">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                                    <polyline points="17 8 12 3 7 8"/>
+                                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                                </svg>
+                                                + Importer un logo
+                                            </button>
+                                            <button type="button" class="o_p3d_clear_btn">✕ Supprimer</button>
+                                        </div>
+                                        <img class="o_p3d_img_preview" src="" alt="Aperçu"/>
+                                        <div class="o_p3d_upload_status"/>
+                                        <p class="o_p3d_upload_hint mb-0">PNG, JPG, SVG — max 5 Mo</p>
+                                    </div>
+
+                                    <!-- Contrôles logo (visibles après upload) -->
+                                    <div class="o_p3d_logo_controls" style="display:none;">
+
+                                        <!-- Zone de repositionnement drag -->
+                                        <div class="o_p3d_logo_drop_wrapper mb-2">
+                                            <div class="o_p3d_drop_label">
+                                                📌 Glissez le point pour repositionner le logo
+                                            </div>
+                                            <div class="o_p3d_logo_drop">
+                                                <!-- fond simulant le déroulé UV du produit -->
+                                                <div class="o_p3d_drop_zones">
+                                                    <span class="o_p3d_drop_zone_label" style="left:50%;top:50%;transform:translate(-50%,-50%)">Face</span>
+                                                    <span class="o_p3d_drop_zone_label" style="left:8%;top:50%;transform:translateY(-50%)">Dos</span>
+                                                    <span class="o_p3d_drop_zone_label" style="left:25%;top:50%;transform:translateY(-50%)">Gauche</span>
+                                                    <span class="o_p3d_drop_zone_label" style="left:75%;top:50%;transform:translateY(-50%)">Droite</span>
+                                                    <span class="o_p3d_drop_zone_label" style="left:50%;top:10%;transform:translateX(-50%)">Haut</span>
+                                                    <span class="o_p3d_drop_zone_label" style="left:50%;top:88%;transform:translateX(-50%)">Bas</span>
+                                                </div>
+                                                <!-- Point draggable représentant le logo -->
+                                                <div class="o_p3d_logo_dot" title="Glissez pour repositionner">
+                                                    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                                                </div>
+                                            </div>
+                                            <small class="text-muted">Cliquez ou glissez le point ● pour changer la position du logo sur le produit</small>
+                                        </div>
+
+                                        <!-- Taille du logo -->
+                                        <div class="mb-2">
+                                            <label class="form-label fw-semibold mb-1 small">
+                                                Taille : <span class="o_p3d_logo_scale_val">35%</span>
+                                            </label>
+                                            <input type="range" class="form-range o_p3d_logo_scale"
+                                                   min="0.08" max="0.85" step="0.01" value="0.35"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ┌─────────────────────────────┐
+                                     │  QUANTITÉ + INFOS           │
+                                     └─────────────────────────────┘ -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="p3d_qty">Quantité</label>
+                                    <input type="number" class="form-control" id="p3d_qty"
+                                           name="quantity" value="1" min="1" step="1"/>
+                                </div>
+
+                                <t t-if="website.is_public_user()">
+                                    <hr/>
+                                    <h6>Vos coordonnées</h6>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control" name="contact_name" placeholder="Nom *" required="required"/>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="email" class="form-control" name="contact_email" placeholder="Email *" required="required"/>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control" name="contact_phone" placeholder="Téléphone"/>
+                                    </div>
+                                </t>
+
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="note" rows="2" placeholder="Remarques (optionnel)"/>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100">
+                                    Demander un devis
+                                </button>
+
+                            </div><!-- /col-droite -->
+                        </div><!-- /row -->
+                    </form>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="quote_thanks" name="Devis 3D">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <div class="alert alert-success">
+                    <h2>Merci&#160;!</h2>
+                    <p>Votre demande de devis <strong t-esc="order.name"/> a bien été enregistrée.</p>
+                    <div t-if="preview" class="my-3">
+                        <img t-att-src="preview" alt="Aperçu 3D"
+                             style="max-width:320px;border:1px solid #ddd;border-radius:6px;"/>
+                    </div>
+                    <a href="/shop" class="btn btn-primary mt-2">Retour à la boutique</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="quote_error" name="Erreur 3D">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <div class="alert alert-danger">
+                    <h2>Demande incomplète</h2>
+                    <ul><li t-foreach="errors" t-as="err"><t t-esc="err"/></li></ul>
+                    <a href="/shop" class="btn btn-secondary mt-2">Retour à la boutique</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_marketplace_account_list" model="ir.ui.view">
+        <field name="name">marketplace.account.list</field>
+        <field name="model">marketplace.account</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="marketplace_id"/>
+                <field name="environment"/>
+                <field name="listing_count"/>
+                <field name="order_count"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'connected'"
+                       decoration-danger="state == 'error'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_marketplace_account_form" model="ir.ui.view">
+        <field name="name">marketplace.account.form</field>
+        <field name="model">marketplace.account</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_test_connection" type="object"
+                            string="Tester la connexion" class="btn-primary"/>
+                    <button name="action_import_orders" type="object"
+                            string="Importer les commandes"/>
+                    <button name="action_export_stock" type="object"
+                            string="Exporter le stock"/>
+                    <button name="action_export_price" type="object"
+                            string="Exporter les prix"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,connected"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_listings" type="object"
+                                class="oe_stat_button" icon="fa-tags">
+                            <field name="listing_count" widget="statinfo"
+                                   string="Annonces"/>
+                        </button>
+                        <button name="action_view_orders" type="object"
+                                class="oe_stat_button" icon="fa-shopping-cart">
+                            <field name="order_count" widget="statinfo"
+                                   string="Commandes"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Nom du compte"/></h1>
+                    </div>
+                    <group>
+                        <group string="Configuration">
+                            <field name="marketplace_id"/>
+                            <field name="code" invisible="1"/>
+                            <field name="environment"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="warehouse_id"/>
+                            <field name="pricelist_id"/>
+                            <field name="fiscal_position_id"/>
+                            <field name="team_id"/>
+                        </group>
+                        <group string="Synchronisation">
+                            <field name="auto_export_stock"/>
+                            <field name="auto_export_price"/>
+                            <field name="auto_import_orders"/>
+                            <field name="last_order_import" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Identifiants API" name="creds">
+                            <group>
+                                <group string="OAuth / App"
+                                       invisible="code not in ('amazon', 'etsy', 'cdiscount')">
+                                    <field name="client_id"/>
+                                    <field name="client_secret" password="True"/>
+                                    <field name="refresh_token" password="True"
+                                           invisible="code not in ('amazon', 'etsy')"/>
+                                    <field name="token_expiry" readonly="1"
+                                           invisible="code not in ('amazon', 'etsy', 'cdiscount')"/>
+                                </group>
+                                <group string="Identifiants marketplace">
+                                    <field name="api_key" password="True"
+                                           invisible="code not in ('laredoute', 'cdiscount')"/>
+                                    <field name="seller_id"
+                                           invisible="code not in ('amazon', 'cdiscount')"/>
+                                    <field name="shop_id"
+                                           invisible="code != 'etsy'"/>
+                                    <field name="region"
+                                           invisible="code != 'amazon'"/>
+                                    <field name="base_url"
+                                           invisible="code not in ('laredoute', 'cdiscount')"/>
+                                </group>
+                            </group>
+                            <div class="alert alert-info" role="alert"
+                                 invisible="code != 'amazon'">
+                                Amazon : region = <b>eu</b>, <b>na</b> ou <b>fe</b> ;
+                                seller_id = Marketplace ID (FR : A13V1IB3VIYZZH).
+                            </div>
+                            <div class="alert alert-info" role="alert"
+                                 invisible="code != 'laredoute'">
+                                La Redoute (Mirakl) : base_url = URL de la plateforme,
+                                api_key = clé API du compte vendeur.
+                            </div>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_marketplace_account" model="ir.actions.act_window">
+        <field name="name">Comptes Marketplace</field>
+        <field name="res_model">marketplace.account</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

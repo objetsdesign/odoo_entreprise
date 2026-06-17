@@ -1,0 +1,53 @@
+.o_vc_customizer {
+    background-color: #fafafa;
+}
+.o_vc_stage {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+.o_vc_base svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.o_vc_layers {
+    position: absolute;
+    inset: 0;
+}
+.o_vc_layer {
+    position: absolute;
+    cursor: move;
+    user-select: none;
+    transform-origin: top left;
+    white-space: nowrap;
+    line-height: 1;
+}
+.o_vc_img {
+    max-width: none;
+}
+.o_vc_selected {
+    outline: 2px dashed #0d6efd;
+    outline-offset: 2px;
+}
+.o_vc_area_guide {
+    position: absolute;
+    border: 1px dashed rgba(13, 110, 253, .6);
+    pointer-events: none;
+}
+.o_vc_color {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #ccc;
+    cursor: pointer;
+}
+.o_vc_color:hover {
+    transform: scale(1.1);
+}
+.o_vc_color_selected {
+    box-shadow: 0 0 0 3px #444;
+}

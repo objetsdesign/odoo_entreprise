@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_measure_field_user,product.measure.field.user,model_product_measure_field,base.group_user,1,1,1,1
+access_product_measure_field_public,product.measure.field.public,model_product_measure_field,base.group_public,1,0,0,0
+access_product_measure_field_portal,product.measure.field.portal,model_product_measure_field,base.group_portal,1,0,0,0
+access_sol_measure_user,sale.order.line.measure.user,model_sale_order_line_measure,base.group_user,1,1,1,1
+access_sol_measure_portal,sale.order.line.measure.portal,model_sale_order_line_measure,base.group_portal,1,0,0,0
+access_sol_measure_public,sale.order.line.measure.public,model_sale_order_line_measure,base.group_public,1,0,0,0

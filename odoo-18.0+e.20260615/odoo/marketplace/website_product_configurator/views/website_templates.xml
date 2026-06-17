@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="product_configurator_block"
+              inherit_id="website_sale.product"
+              name="Configurateur visuel produit">
+        <xpath expr="//div[@id='product_details']" position="inside">
+            <t t-if="product.is_configurable">
+                <div class="o_pc_configurator mt-4 p-3 border rounded">
+                    <h4 class="mb-3">Personnalisez votre produit</h4>
+                    <form action="/product_configurator/quote" method="post"
+                          class="js_pc_form">
+                        <input type="hidden" name="csrf_token"
+                               t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="product_template_id"
+                               t-att-value="product.id"/>
+                        <input type="hidden" name="config_data" value="[]"/>
+                        <input type="hidden" name="preview_image" value=""/>
+
+                        <div class="row">
+                            <!-- Canvas / dessin du produit -->
+                            <div class="col-lg-6 mb-3">
+                                <div class="o_pc_canvas border rounded bg-white p-2"
+                                     t-out="product.config_svg_html"/>
+                            </div>
+
+                            <!-- Contrôles -->
+                            <div class="col-lg-6">
+                                <t t-if="product.config_part_ids">
+                                    <label class="form-label fw-bold">1. Choisissez une partie</label>
+                                    <div class="o_pc_parts d-flex flex-wrap gap-2 mb-3">
+                                        <t t-foreach="product.config_part_ids" t-as="part">
+                                            <button type="button"
+                                                    class="btn btn-outline-secondary btn-sm o_pc_part"
+                                                    t-att-data-target="part.svg_target"
+                                                    t-att-data-name="part.name"
+                                                    t-att-data-default="part.default_color">
+                                                <t t-esc="part.name"/>
+                                            </button>
+                                        </t>
+                                    </div>
+                                </t>
+
+                                <t t-if="product.config_color_ids">
+                                    <label class="form-label fw-bold">2. Choisissez une couleur</label>
+                                    <div class="o_pc_colors d-flex flex-wrap gap-2 mb-3">
+                                        <t t-foreach="product.config_color_ids" t-as="color">
+                                            <span class="o_pc_color"
+                                                  t-att-title="color.name"
+                                                  t-att-data-id="color.id"
+                                                  t-att-data-name="color.name"
+                                                  t-att-data-color="color.html_color"
+                                                  t-attf-style="background-color:{{color.html_color}};"/>
+                                        </t>
+                                    </div>
+                                </t>
+
+                                <t t-if="product.config_size_ids">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold" for="pc_size">3. Taille</label>
+                                        <select class="form-select o_pc_size" id="pc_size" name="size_id">
+                                            <t t-foreach="product.config_size_ids" t-as="size">
+                                                <option t-att-value="size.id">
+                                                    <t t-esc="size.name"/>
+                                                    <t t-if="size.extra_price"> (+<t t-esc="size.extra_price"/>)</t>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </t>
+
+                                <t t-if="product.config_option_ids">
+                                    <label class="form-label fw-bold">Options</label>
+                                    <t t-foreach="product.config_option_ids" t-as="opt">
+                                        <div class="mb-3 o_pc_option">
+                                            <t t-if="opt.option_type == 'boolean'">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           t-attf-id="opt_{{opt.id}}"
+                                                           t-attf-name="option_{{opt.id}}" value="1"/>
+                                                    <label class="form-check-label" t-attf-for="opt_{{opt.id}}">
+                                                        <t t-esc="opt.name"/>
+                                                        <t t-if="opt.extra_price"> (+<t t-esc="opt.extra_price"/>)</t>
+                                                    </label>
+                                                </div>
+                                            </t>
+                                            <t t-else="">
+                                                <label class="form-label" t-attf-for="opt_{{opt.id}}">
+                                                    <t t-esc="opt.name"/>
+                                                    <t t-if="opt.extra_price"> (+<t t-esc="opt.extra_price"/>)</t>
+                                                    <span t-if="opt.required" class="text-danger">*</span>
+                                                </label>
+                                                <t t-if="opt.option_type == 'select'">
+                                                    <select class="form-select" t-attf-id="opt_{{opt.id}}"
+                                                            t-attf-name="option_{{opt.id}}"
+                                                            t-att-required="'required' if opt.required else None">
+                                                        <option value="">---</option>
+                                                        <t t-foreach="(opt.selection_options or '').split(',')" t-as="ch">
+                                                            <option t-if="ch.strip()" t-att-value="ch.strip()">
+                                                                <t t-esc="ch.strip()"/>
+                                                            </option>
+                                                        </t>
+                                                    </select>
+                                                </t>
+                                                <t t-else="">
+                                                    <input type="text" class="form-control"
+                                                           t-attf-id="opt_{{opt.id}}"
+                                                           t-attf-name="option_{{opt.id}}"
+                                                           t-att-required="'required' if opt.required else None"/>
+                                                </t>
+                                            </t>
+                                            <small t-if="opt.help_text" class="form-text text-muted">
+                                                <t t-esc="opt.help_text"/>
+                                            </small>
+                                        </div>
+                                    </t>
+                                </t>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="pc_quantity">Quantité</label>
+                                    <input type="number" class="form-control" id="pc_quantity"
+                                           name="quantity" value="1" min="1" step="1"/>
+                                </div>
+
+                                <!-- Coordonnées si visiteur non connecté -->
+                                <t t-if="website.is_public_user()">
+                                    <hr/>
+                                    <h6>Vos coordonnées</h6>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control" name="contact_name"
+                                               placeholder="Nom *" required="required"/>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="email" class="form-control" name="contact_email"
+                                               placeholder="Email *" required="required"/>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control" name="contact_phone"
+                                               placeholder="Téléphone"/>
+                                    </div>
+                                </t>
+
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="note" rows="2"
+                                              placeholder="Remarques (optionnel)"/>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100">
+                                    Demander un devis
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="quote_thanks" name="Devis configurateur envoyé">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <div class="alert alert-success">
+                    <h2>Merci&#160;!</h2>
+                    <p>
+                        Votre demande de devis <strong t-esc="order.name"/>
+                        a bien été enregistrée avec votre configuration.
+                        Notre équipe vous recontactera avec une proposition.
+                    </p>
+                    <div t-if="preview" class="my-3">
+                        <img t-att-src="preview" alt="Aperçu"
+                             style="max-width:280px;border:1px solid #ddd;border-radius:6px;"/>
+                    </div>
+                    <a href="/shop" class="btn btn-primary mt-2">Retour à la boutique</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="quote_error" name="Erreur configurateur">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <div class="alert alert-danger">
+                    <h2>Demande incomplète</h2>
+                    <ul>
+                        <li t-foreach="errors" t-as="err"><t t-esc="err"/></li>
+                    </ul>
+                    <a href="/shop" class="btn btn-secondary mt-2">Retour à la boutique</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

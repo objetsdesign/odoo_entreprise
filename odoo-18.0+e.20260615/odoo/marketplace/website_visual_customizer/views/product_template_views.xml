@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_template_form_view_vc" model="ir.ui.view">
+        <field name="name">product.template.form.visual.customizer</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Personnalisation visuelle" name="visual_customizer">
+                    <group>
+                        <field name="is_visual_customizer"/>
+                    </group>
+                    <group invisible="not is_visual_customizer">
+                        <field name="vc_color_target"/>
+                        <field name="vc_fonts"/>
+                        <field name="vc_area" placeholder="ex : 130,150,140,180 (optionnel)"/>
+                    </group>
+                    <group invisible="not is_visual_customizer">
+                        <field name="vc_svg" placeholder="Collez ici le code SVG du produit..."
+                               widget="text"/>
+                    </group>
+                    <separator string="Couleurs du produit" invisible="not is_visual_customizer"/>
+                    <field name="vc_color_ids" invisible="not is_visual_customizer">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="html_color" widget="color"/>
+                            <field name="extra_price"/>
+                        </list>
+                    </field>
+                    <separator string="Dimensions" invisible="not is_visual_customizer"/>
+                    <field name="vc_dimension_ids" invisible="not is_visual_customizer">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="unit"/>
+                            <field name="min_value"/>
+                            <field name="max_value"/>
+                            <field name="default_value"/>
+                            <field name="price_per_unit"/>
+                            <field name="required"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

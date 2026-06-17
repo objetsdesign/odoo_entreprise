@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vc_color_user,product.vc.color.user,model_product_vc_color,base.group_user,1,1,1,1
+access_vc_color_public,product.vc.color.public,model_product_vc_color,base.group_public,1,0,0,0
+access_vc_color_portal,product.vc.color.portal,model_product_vc_color,base.group_portal,1,0,0,0
+access_vc_dimension_user,product.vc.dimension.user,model_product_vc_dimension,base.group_user,1,1,1,1
+access_vc_dimension_public,product.vc.dimension.public,model_product_vc_dimension,base.group_public,1,0,0,0
+access_vc_dimension_portal,product.vc.dimension.portal,model_product_vc_dimension,base.group_portal,1,0,0,0

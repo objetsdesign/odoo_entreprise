@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="product_demo_tshirt" model="product.template">
+            <field name="name">T-shirt personnalisable</field>
+            <field name="type">consu</field>
+            <field name="sale_ok" eval="True"/>
+            <field name="website_published" eval="True"/>
+            <field name="list_price">25.0</field>
+            <field name="is_configurable" eval="True"/>
+            <field name="config_svg"><![CDATA[
+<svg id="pc_svg" viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg">
+  <g id="part_sleeves" fill="#cccccc">
+    <path d="M118 60 L40 120 L78 178 L138 132 Z"/>
+    <path d="M282 60 L360 120 L322 178 L262 132 Z"/>
+  </g>
+  <path id="part_body" fill="#dddddd"
+        d="M118 60 C150 96 250 96 282 60 L300 152 L262 132 L262 404
+           C200 418 200 418 138 404 L138 132 L100 152 Z"/>
+  <path id="part_collar" fill="#bbbbbb"
+        d="M160 60 C178 92 222 92 240 60 C220 80 180 80 160 60 Z"/>
+</svg>
+            ]]></field>
+        </record>
+
+        <!-- Parties recolorables -->
+        <record id="tshirt_part_body" model="product.config.part">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Corps</field>
+            <field name="svg_target">#part_body</field>
+            <field name="default_color">#ecf0f1</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="tshirt_part_sleeves" model="product.config.part">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Manches</field>
+            <field name="svg_target">#part_sleeves</field>
+            <field name="default_color">#3498db</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="tshirt_part_collar" model="product.config.part">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Col</field>
+            <field name="svg_target">#part_collar</field>
+            <field name="default_color">#2c3e50</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <!-- Couleurs -->
+        <record id="tshirt_color_white" model="product.config.color">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Blanc</field>
+            <field name="html_color">#ecf0f1</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="tshirt_color_red" model="product.config.color">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Rouge</field>
+            <field name="html_color">#e74c3c</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="tshirt_color_blue" model="product.config.color">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Bleu</field>
+            <field name="html_color">#3498db</field>
+            <field name="sequence">30</field>
+        </record>
+        <record id="tshirt_color_green" model="product.config.color">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Vert</field>
+            <field name="html_color">#2ecc71</field>
+            <field name="sequence">40</field>
+        </record>
+        <record id="tshirt_color_yellow" model="product.config.color">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Jaune</field>
+            <field name="html_color">#f1c40f</field>
+            <field name="sequence">50</field>
+        </record>
+        <record id="tshirt_color_black" model="product.config.color">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Noir</field>
+            <field name="html_color">#2c3e50</field>
+            <field name="sequence">60</field>
+        </record>
+
+        <!-- Tailles -->
+        <record id="tshirt_size_s" model="product.config.size">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">S</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="tshirt_size_m" model="product.config.size">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">M</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="tshirt_size_l" model="product.config.size">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">L</field>
+            <field name="extra_price">2.0</field>
+            <field name="sequence">30</field>
+        </record>
+        <record id="tshirt_size_xl" model="product.config.size">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">XL</field>
+            <field name="extra_price">4.0</field>
+            <field name="sequence">40</field>
+        </record>
+
+        <!-- Options / propositions -->
+        <record id="tshirt_opt_text" model="product.config.option">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Texte à imprimer</field>
+            <field name="option_type">text</field>
+            <field name="help_text">Laissez vide pour aucun texte</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="tshirt_opt_finish" model="product.config.option">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Finition</field>
+            <field name="option_type">select</field>
+            <field name="selection_options">Standard, Premium, Bio</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="tshirt_opt_gift" model="product.config.option">
+            <field name="product_tmpl_id" ref="product_demo_tshirt"/>
+            <field name="name">Emballage cadeau</field>
+            <field name="option_type">boolean</field>
+            <field name="extra_price">3.0</field>
+            <field name="sequence">30</field>
+        </record>
+
+    </data>
+</odoo>

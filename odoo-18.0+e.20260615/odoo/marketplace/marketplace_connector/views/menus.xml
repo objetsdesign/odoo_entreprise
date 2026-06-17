@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_marketplace_root" name="Marketplaces"
+              web_icon="marketplace_connector,static/description/icon.png"
+              sequence="50"/>
+
+    <menuitem id="menu_marketplace_accounts" name="Comptes"
+              parent="menu_marketplace_root"
+              action="action_marketplace_account" sequence="10"/>
+
+    <menuitem id="menu_marketplace_listings" name="Annonces"
+              parent="menu_marketplace_root"
+              action="action_marketplace_listing" sequence="20"/>
+
+    <menuitem id="menu_marketplace_orders" name="Commandes"
+              parent="menu_marketplace_root"
+              action="action_marketplace_orders" sequence="30"/>
+
+    <menuitem id="menu_marketplace_config" name="Configuration"
+              parent="menu_marketplace_root" sequence="90"
+              groups="group_marketplace_manager"/>
+
+    <menuitem id="menu_marketplace_marketplaces" name="Marketplaces"
+              parent="menu_marketplace_config"
+              action="action_marketplace" sequence="10"/>
+
+    <menuitem id="menu_marketplace_logs" name="Journal de synchronisation"
+              parent="menu_marketplace_config"
+              action="action_sync_log" sequence="20"/>
+</odoo>

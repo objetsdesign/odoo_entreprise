@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_config_color_user,product.config.color.user,model_product_config_color,base.group_user,1,1,1,1
+access_config_color_public,product.config.color.public,model_product_config_color,base.group_public,1,0,0,0
+access_config_color_portal,product.config.color.portal,model_product_config_color,base.group_portal,1,0,0,0
+access_config_part_user,product.config.part.user,model_product_config_part,base.group_user,1,1,1,1
+access_config_part_public,product.config.part.public,model_product_config_part,base.group_public,1,0,0,0
+access_config_part_portal,product.config.part.portal,model_product_config_part,base.group_portal,1,0,0,0
+access_config_size_user,product.config.size.user,model_product_config_size,base.group_user,1,1,1,1
+access_config_size_public,product.config.size.public,model_product_config_size,base.group_public,1,0,0,0
+access_config_size_portal,product.config.size.portal,model_product_config_size,base.group_portal,1,0,0,0
+access_config_option_user,product.config.option.user,model_product_config_option,base.group_user,1,1,1,1
+access_config_option_public,product.config.option.public,model_product_config_option,base.group_public,1,0,0,0
+access_config_option_portal,product.config.option.portal,model_product_config_option,base.group_portal,1,0,0,0

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_template_form_view_configurator" model="ir.ui.view">
+        <field name="name">product.template.form.configurator</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Configurateur" name="configurator">
+                    <group>
+                        <field name="is_configurable"/>
+                    </group>
+                    <group invisible="not is_configurable">
+                        <field name="config_svg" placeholder="Collez ici le code SVG du produit..."
+                               widget="text"/>
+                    </group>
+                    <separator string="Parties recolorables" invisible="not is_configurable"/>
+                    <field name="config_part_ids" invisible="not is_configurable">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="svg_target"/>
+                            <field name="default_color" widget="color"/>
+                        </list>
+                    </field>
+                    <separator string="Couleurs disponibles" invisible="not is_configurable"/>
+                    <field name="config_color_ids" invisible="not is_configurable">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="html_color" widget="color"/>
+                            <field name="extra_price"/>
+                        </list>
+                    </field>
+                    <separator string="Tailles disponibles" invisible="not is_configurable"/>
+                    <field name="config_size_ids" invisible="not is_configurable">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="extra_price"/>
+                        </list>
+                    </field>
+                    <separator string="Options / propositions" invisible="not is_configurable"/>
+                    <field name="config_option_ids" invisible="not is_configurable">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="option_type"/>
+                            <field name="selection_options"/>
+                            <field name="extra_price"/>
+                            <field name="required"/>
+                            <field name="help_text"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

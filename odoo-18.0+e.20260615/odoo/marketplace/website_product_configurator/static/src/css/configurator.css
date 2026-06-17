@@ -1,0 +1,27 @@
+.o_pc_configurator {
+    background-color: #fafafa;
+}
+.o_pc_canvas svg {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+}
+.o_pc_color {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #ccc;
+    cursor: pointer;
+    transition: transform .1s ease;
+}
+.o_pc_color:hover {
+    transform: scale(1.12);
+}
+.o_pc_color_selected {
+    box-shadow: 0 0 0 3px #444;
+}
+.o_pc_part.active {
+    font-weight: 600;
+}

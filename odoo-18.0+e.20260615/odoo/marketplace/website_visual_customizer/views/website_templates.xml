@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="vc_customizer_block"
+              inherit_id="website_sale.product"
+              name="Visual customizer">
+        <xpath expr="//div[@id='product_details']" position="inside">
+            <t t-if="product.is_visual_customizer">
+                <div class="o_vc_customizer mt-4 p-3 border rounded"
+                     t-att-data-area="product.vc_area or ''"
+                     t-att-data-color-target="product.vc_color_target or '#part_body'">
+                    <h4 class="mb-3">Personnalisez votre produit</h4>
+                    <form action="/visual_customizer/quote" method="post" class="js_vc_form">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="product_template_id" t-att-value="product.id"/>
+                        <input type="hidden" name="design_data" value="[]"/>
+                        <input type="hidden" name="preview_image" value=""/>
+                        <input type="hidden" name="color_id" value=""/>
+                        <input type="hidden" name="color_name" value=""/>
+
+                        <div class="row">
+                            <!-- Scène : produit + calques -->
+                            <div class="col-lg-6 mb-3">
+                                <div class="o_vc_stage border rounded bg-white">
+                                    <div class="o_vc_base" t-out="product.vc_svg_html"/>
+                                    <div class="o_vc_layers"/>
+                                </div>
+                            </div>
+
+                            <!-- Barre d'outils -->
+                            <div class="col-lg-6">
+                                <t t-if="product.vc_color_ids">
+                                    <label class="form-label fw-bold">Couleur du produit</label>
+                                    <div class="o_vc_colors d-flex flex-wrap gap-2 mb-3">
+                                        <t t-foreach="product.vc_color_ids" t-as="c">
+                                            <span class="o_vc_color"
+                                                  t-att-title="c.name"
+                                                  t-att-data-id="c.id"
+                                                  t-att-data-name="c.name"
+                                                  t-att-data-color="c.html_color"
+                                                  t-attf-style="background-color:{{c.html_color}};"/>
+                                        </t>
+                                    </div>
+                                </t>
+
+                                <label class="form-label fw-bold">Ajouter</label>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <button type="button" class="btn btn-outline-primary btn-sm js_vc_add_text">
+                                        + Texte
+                                    </button>
+                                    <label class="btn btn-outline-primary btn-sm mb-0">
+                                        + Image / logo
+                                        <input type="file" accept="image/*" class="d-none js_vc_add_image"/>
+                                    </label>
+                                </div>
+
+                                <!-- Réglages de l'élément sélectionné -->
+                                <div class="o_vc_inspector border rounded p-2 mb-3" style="display:none;">
+                                    <div class="js_vc_text_only">
+                                        <div class="mb-2">
+                                            <label class="form-label mb-0">Texte</label>
+                                            <input type="text" class="form-control form-control-sm js_vc_text"/>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label mb-0">Police</label>
+                                            <select class="form-select form-select-sm js_vc_font">
+                                                <t t-foreach="(product.vc_fonts or 'Arial').split(',')" t-as="f">
+                                                    <option t-if="f.strip()" t-att-value="f.strip()">
+                                                        <t t-esc="f.strip()"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                        <div class="mb-2 d-flex align-items-center gap-2">
+                                            <label class="form-label mb-0">Couleur</label>
+                                            <input type="color" class="form-control form-control-sm js_vc_textcolor"
+                                                   value="#000000" style="max-width:60px;"/>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label mb-0">Taille</label>
+                                        <input type="range" class="form-range js_vc_size" min="10" max="120" value="28"/>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label mb-0">Rotation</label>
+                                        <input type="range" class="form-range js_vc_rotate" min="-180" max="180" value="0"/>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-danger btn-sm js_vc_delete">
+                                        Supprimer l'élément
+                                    </button>
+                                </div>
+
+                                <t t-if="product.vc_dimension_ids">
+                                    <label class="form-label fw-bold">Dimensions</label>
+                                    <div class="mb-3">
+                                        <t t-foreach="product.vc_dimension_ids" t-as="dim">
+                                            <div class="mb-2">
+                                                <label class="form-label mb-0" t-attf-for="dim_{{dim.id}}">
+                                                    <t t-esc="dim.name"/>
+                                                    <span t-if="dim.unit" class="text-muted"> (<t t-esc="dim.unit"/>)</span>
+                                                    <span t-if="dim.required" class="text-danger">*</span>
+                                                </label>
+                                                <input type="number" class="form-control"
+                                                       t-attf-id="dim_{{dim.id}}"
+                                                       t-attf-name="dimension_{{dim.id}}"
+                                                       step="any"
+                                                       t-att-min="dim.min_value or None"
+                                                       t-att-max="dim.max_value or None"
+                                                       t-att-value="dim.default_value or None"
+                                                       t-att-required="'required' if dim.required else None"/>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </t>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="vc_quantity">Quantité</label>
+                                    <input type="number" class="form-control" id="vc_quantity"
+                                           name="quantity" value="1" min="1" step="1"/>
+                                </div>
+
+                                <t t-if="website.is_public_user()">
+                                    <hr/>
+                                    <h6>Vos coordonnées</h6>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control" name="contact_name"
+                                               placeholder="Nom *" required="required"/>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="email" class="form-control" name="contact_email"
+                                               placeholder="Email *" required="required"/>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control" name="contact_phone"
+                                               placeholder="Téléphone"/>
+                                    </div>
+                                </t>
+
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="note" rows="2"
+                                              placeholder="Remarques (optionnel)"/>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100">
+                                    Demander un devis
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="quote_thanks" name="Devis visual customizer">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <div class="alert alert-success">
+                    <h2>Merci&#160;!</h2>
+                    <p>Votre demande de devis <strong t-esc="order.name"/> a bien été
+                        enregistrée avec votre personnalisation.</p>
+                    <div t-if="preview" class="my-3">
+                        <img t-att-src="preview" alt="Aperçu"
+                             style="max-width:300px;border:1px solid #ddd;border-radius:6px;"/>
+                    </div>
+                    <a href="/shop" class="btn btn-primary mt-2">Retour à la boutique</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="quote_error" name="Erreur visual customizer">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <div class="alert alert-danger">
+                    <h2>Demande incomplète</h2>
+                    <ul><li t-foreach="errors" t-as="err"><t t-esc="err"/></li></ul>
+                    <a href="/shop" class="btn btn-secondary mt-2">Retour à la boutique</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

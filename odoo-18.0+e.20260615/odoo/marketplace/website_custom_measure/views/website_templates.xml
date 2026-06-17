@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Formulaire de mesures injecté sur la fiche produit -->
+    <template id="product_custom_measure_form"
+              inherit_id="website_sale.product"
+              name="Formulaire produit sur mesure">
+        <xpath expr="//div[@id='product_details']" position="inside">
+            <t t-if="product.is_custom_measure">
+                <div class="o_custom_measure_form mt-4 p-3 border rounded">
+                    <h4 class="mb-3">Demander un devis sur mesure</h4>
+                    <form action="/custom_measure/quote" method="post"
+                          class="js_custom_measure_form">
+                        <input type="hidden" name="csrf_token"
+                               t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="product_template_id"
+                               t-att-value="product.id"/>
+
+                        <t t-foreach="product.measure_field_ids" t-as="mf">
+                            <div class="mb-3 o_measure_field">
+                                <label class="form-label"
+                                       t-attf-for="measure_{{mf.id}}">
+                                    <t t-esc="mf.name"/>
+                                    <span t-if="mf.unit" class="text-muted">
+                                        (<t t-esc="mf.unit"/>)</span>
+                                    <span t-if="mf.required" class="text-danger">*</span>
+                                </label>
+
+                                <t t-if="mf.field_type == 'selection'">
+                                    <select class="form-select"
+                                            t-attf-name="measure_{{mf.id}}"
+                                            t-att-required="'required' if mf.required else None">
+                                        <option value="">---</option>
+                                        <t t-foreach="(mf.selection_options or '').split(',')"
+                                           t-as="opt">
+                                            <option t-if="opt.strip()"
+                                                    t-att-value="opt.strip()">
+                                                <t t-esc="opt.strip()"/>
+                                            </option>
+                                        </t>
+                                    </select>
+                                </t>
+                                <t t-elif="mf.field_type == 'char'">
+                                    <input type="text" class="form-control"
+                                           t-attf-name="measure_{{mf.id}}"
+                                           t-att-required="'required' if mf.required else None"/>
+                                </t>
+                                <t t-else="">
+                                    <input type="number" class="form-control js_measure_number"
+                                           t-attf-name="measure_{{mf.id}}"
+                                           t-att-step="'1' if mf.field_type == 'integer' else 'any'"
+                                           t-att-min="mf.min_value or None"
+                                           t-att-max="mf.max_value or None"
+                                           t-att-required="'required' if mf.required else None"/>
+                                </t>
+
+                                <small t-if="mf.help_text" class="form-text text-muted">
+                                    <t t-esc="mf.help_text"/>
+                                </small>
+                            </div>
+                        </t>
+
+                        <!-- Coordonnées pour les visiteurs non connectés -->
+                        <t t-if="website.is_public_user()">
+                            <hr/>
+                            <h5 class="mb-3">Vos coordonnées</h5>
+                            <div class="mb-3">
+                                <label class="form-label" for="contact_name">
+                                    Nom <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control"
+                                       id="contact_name" name="contact_name" required="required"/>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="contact_email">
+                                    Email <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" class="form-control"
+                                       id="contact_email" name="contact_email" required="required"/>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="contact_phone">Téléphone</label>
+                                <input type="text" class="form-control"
+                                       id="contact_phone" name="contact_phone"/>
+                            </div>
+                        </t>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="cm_quantity">Quantité</label>
+                            <input type="number" class="form-control" id="cm_quantity"
+                                   name="quantity" value="1" min="1" step="1"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="cm_note">Remarques</label>
+                            <textarea class="form-control" id="cm_note" name="note" rows="2"/>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Envoyer ma demande de devis
+                        </button>
+                    </form>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Page de confirmation -->
+    <template id="quote_thanks" name="Devis envoyé">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <div class="alert alert-success">
+                    <h2>Merci&#160;!</h2>
+                    <p>
+                        Votre demande de devis
+                        <strong t-esc="order.name"/>
+                        a bien été enregistrée. Notre équipe vous contactera
+                        rapidement avec une proposition de prix.
+                    </p>
+                    <a href="/shop" class="btn btn-primary mt-2">Retour à la boutique</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Page d'erreur de validation -->
+    <template id="quote_error" name="Erreur de demande de devis">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <div class="alert alert-danger">
+                    <h2>Demande incomplète</h2>
+                    <ul>
+                        <li t-foreach="errors" t-as="err"><t t-esc="err"/></li>
+                    </ul>
+                    <a href="/shop" class="btn btn-secondary mt-2">Retour à la boutique</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>
